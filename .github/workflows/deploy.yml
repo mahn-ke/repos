@@ -1,0 +1,11 @@
+name: Deploy service, generate certificates, and update NGINX configuration
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    uses: mahn-ke/.github/.github/workflows/deploy.yml@main
+    secrets: inherit
