@@ -21,33 +21,42 @@ provider "github" {
 }
 
 locals {
-    repo_names = [
-        "ttrss",
-        "api-uptime",
-        "homeassistant",
-        "uptime",
-        "sso"
-    ]
+  subdomains = [
+    "ttrss",
+    "api.uptime",
+    "homeassistant",
+    "uptime",
+    "sso"
+  ]
+  repos = [
+    ".github",
+    "repos",
+    "tfstate",
+    "resources"
+  ]
+  repo_names = concat(local.repos, [
+    for s in local.subdomains : "${replace(s, ".", "-")}-by-vincent"
+  ])
 }
 
 resource "github_repository" "repos" {
-    for_each          = toset(local.repo_names)
-    name              = "${each.value}-by-vincent"
-    visibility        = "public"
-    auto_init         = false
-    license_template  = "gpl-3.0"
-    allow_merge_commit = false
-    allow_rebase_merge = true
-    allow_squash_merge = true
-    has_downloads = false
-    has_issues = true
-    has_projects = false
-    has_wiki = false
-    merge_commit_title = "PR_TITLE"
-    merge_commit_message = "PR_BODY"
-    squash_merge_commit_title = "PR_TITLE"
-    squash_merge_commit_message = "PR_BODY"
-    vulnerability_alerts = true
+  for_each                    = toset(local.repo_names)
+  name                        = each.key
+  visibility                  = "public"
+  auto_init                   = false
+  license_template            = "gpl-3.0"
+  allow_merge_commit          = false
+  allow_rebase_merge          = true
+  allow_squash_merge          = true
+  has_downloads               = false
+  has_issues                  = true
+  has_projects                = false
+  has_wiki                    = false
+  merge_commit_title          = "PR_TITLE"
+  merge_commit_message        = "PR_BODY"
+  squash_merge_commit_title   = "PR_TITLE"
+  squash_merge_commit_message = "PR_BODY"
+  vulnerability_alerts        = true
 }
 
 data "github_user" "current" {
@@ -56,9 +65,9 @@ data "github_user" "current" {
 
 // add 'production' environment with ViMaSter as reviewer
 resource "github_repository_environment" "production" {
-  for_each = toset(local.repo_names)
-  repository = github_repository.repos[each.key].name
-  environment = "production"
+  for_each            = toset(local.repo_names)
+  repository          = github_repository.repos[each.key].name
+  environment         = "production"
   prevent_self_review = false
   reviewers {
     users = [data.github_user.current.id]
