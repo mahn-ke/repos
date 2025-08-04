@@ -32,7 +32,8 @@ locals {
     ".github",
     "repos",
     "tfstate",
-    "resources"
+    "resources",
+    "ccc-event-tracker"
   ]
   repo_names = concat(local.repos, [
     for s in local.subdomains : "${replace(s, ".", "-")}-by-vincent"
