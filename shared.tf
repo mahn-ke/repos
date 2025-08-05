@@ -35,13 +35,14 @@ locals {
     "resources",
     "ccc-event-tracker"
   ]
-  repo_names = concat(local.repos, [
-    for s in local.subdomains : "${replace(s, ".", "-")}-by-vincent"
-  ])
+  repositories = merge(
+    { for r in local.repos : r => { tags = [] } },
+    { for s in local.subdomains : "${replace(s, ".", "-")}-by-vincent" => { tags = ["domain"] } }
+  )
 }
 
 resource "github_repository" "repos" {
-  for_each                    = toset(local.repo_names)
+  for_each                    = local.repositories
   name                        = each.key
   visibility                  = "public"
   auto_init                   = false
@@ -60,13 +61,18 @@ resource "github_repository" "repos" {
   vulnerability_alerts        = true
 }
 
+resource "github_repository_topics" "repos" {
+  for_each   = local.repositories
+  repository = github_repository.repos[each.key].name
+  topics     = each.value.tags
+}
+
 data "github_user" "current" {
   username = "ViMaSter"
 }
 
-// add 'production' environment with ViMaSter as reviewer
 resource "github_repository_environment" "production" {
-  for_each            = toset(local.repo_names)
+  for_each            = local.repositories
   repository          = github_repository.repos[each.key].name
   environment         = "production"
   prevent_self_review = false
@@ -74,11 +80,3 @@ resource "github_repository_environment" "production" {
     users = [data.github_user.current.id]
   }
 }
-
-/*
-terraform import 'github_repository_environment.production["ttrss"]' ttrss-by-vincent:production
-terraform import 'github_repository_environment.production["api-uptime"]' api-uptime-by-vincent:production
-terraform import 'github_repository_environment.production["homeassistant"]' homeassistant-by-vincent:production
-terraform import 'github_repository_environment.production["uptime"]' uptime-by-vincent:production
-terraform import 'github_repository_environment.production["sso"]' sso-by-vincent:production
-*/
