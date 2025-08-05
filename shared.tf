@@ -54,8 +54,6 @@ resource "github_repository" "repos" {
   has_issues                  = true
   has_projects                = false
   has_wiki                    = false
-  merge_commit_title          = "PR_TITLE"
-  merge_commit_message        = "PR_BODY"
   squash_merge_commit_title   = "PR_TITLE"
   squash_merge_commit_message = "PR_BODY"
   vulnerability_alerts        = true
