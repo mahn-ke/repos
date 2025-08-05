@@ -59,6 +59,14 @@ resource "github_repository" "repos" {
   vulnerability_alerts        = true
 }
 
+resource "github_repository_file" "workflow_deploy" {
+  for_each                    = local.repositories
+  repository = github_repository.repos[each.key].name
+  file       = ".github/workflows/deploy.yml"
+  content    = file("${path.module}/repository_template/.github/workflows/deploy.yml")
+  overwrite_on_create = true
+}
+
 resource "github_repository_topics" "repos" {
   for_each   = local.repositories
   repository = github_repository.repos[each.key].name
