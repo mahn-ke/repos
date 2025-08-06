@@ -10,6 +10,10 @@ terraform {
       source  = "mrparkers/keycloak"
       version = "4.4.0"
     }
+    github = {
+      source  = "integrations/github"
+      version = "~> 6.6.0"
+    }
   }
 }
 
@@ -19,6 +23,11 @@ provider "allinkl" {
 
 provider "keycloak" {
   url = "https://sso.by.vincent.mahn.ke"
+}
+
+provider "github" {
+  owner = "mahn-ke"
+  token = var.GITHUB_PAT
 }
 
 data "keycloak_realm" "sso_by_vincent_mahn_ke" {

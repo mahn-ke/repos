@@ -15,11 +15,6 @@ variable "GITHUB_PAT" {
   sensitive   = true
 }
 
-provider "github" {
-  owner = "mahn-ke"
-  token = var.GITHUB_PAT
-}
-
 locals {
   generic = toset([
     ".github",
