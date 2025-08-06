@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    github = {
+      source  = "integrations/github"
+      version = "~> 6.6.0"
+    }
+  }
+}
+
 resource "github_repository_file" "dockerfile" {
   repository          = var.repository_reference
   file                = "app/Dockerfile"
