@@ -1,0 +1,43 @@
+| before                                                               | after                                                                        |
+| -------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| github_repository.repos[".github"]                                   | module.general[".github"].github_repository.repos                            |
+| github_repository.repos["api-uptime-by-vincent"]                     | module.general["api.uptime"].github_repository.repos                         |
+| github_repository.repos["ccc-event-tracker"]                         | module.general["ccc-event-tracker"].github_repository.repos                  |
+| github_repository.repos["fah-break"]                                 | module.general["fah-break"].github_repository.repos                          |
+| github_repository.repos["homeassistant-by-vincent"]                  | module.general["homeassistant"].github_repository.repos                      |
+| github_repository.repos["repos"]                                     | module.general["repos"].github_repository.repos                              |
+| github_repository.repos["resources"]                                 | module.general["resources"].github_repository.repos                          |
+| github_repository.repos["sso-by-vincent"]                            | module.general["sso"].github_repository.repos                                |
+| github_repository.repos["tfstate"]                                   | module.general["tfstate"].github_repository.repos                            |
+| github_repository.repos["ttrss-by-vincent"]                          | module.general["ttrss"].github_repository.repos                              |
+| github_repository.repos["uptime-by-vincent"]                         | module.general["uptime"].github_repository.repos                             |
+|                                                                      |
+| github_repository_environment.production[".github"]                  | module.general[".github"].github_repository_environment.production           |
+| github_repository_environment.production["api-uptime-by-vincent"]    | module.general["api.uptime"].github_repository_environment.production        |
+| github_repository_environment.production["ccc-event-tracker"]        | module.general["ccc-event-tracker"].github_repository_environment.production |
+| github_repository_environment.production["fah-break"]                | module.general["fah-break"].github_repository_environment.production         |
+| github_repository_environment.production["homeassistant-by-vincent"] | module.general["homeassistant"].github_repository_environment.production     |
+| github_repository_environment.production["repos"]                    | module.general["repos"].github_repository_environment.production             |
+| github_repository_environment.production["resources"]                | module.general["resources"].github_repository_environment.production         |
+| github_repository_environment.production["sso-by-vincent"]           | module.general["sso"].github_repository_environment.production               |
+| github_repository_environment.production["tfstate"]                  | module.general["tfstate"].github_repository_environment.production           |
+| github_repository_environment.production["ttrss-by-vincent"]         | module.general["ttrss"].github_repository_environment.production             |
+| github_repository_environment.production["uptime-by-vincent"]        | module.general["uptime"].github_repository_environment.production            |
+|                                                                      |
+| github_repository_file.workflow_deploy[".github"]                    | module.general[".github"].github_repository_file.workflow_deploy             |
+| github_repository_file.workflow_deploy["api-uptime-by-vincent"]      | module.general["api.uptime"].github_repository_file.workflow_deploy          |
+| github_repository_file.workflow_deploy["ccc-event-tracker"]          | module.general["ccc-event-tracker"].github_repository_file.workflow_deploy   |
+| github_repository_file.workflow_deploy["fah-break"]                  | module.general["fah-break"].github_repository_file.workflow_deploy           |
+| github_repository_file.workflow_deploy["homeassistant-by-vincent"]   | module.general["homeassistant"].github_repository_file.workflow_deploy       |
+| github_repository_file.workflow_deploy["repos"]                      | module.general["repos"].github_repository_file.workflow_deploy               |
+| github_repository_file.workflow_deploy["resources"]                  | module.general["resources"].github_repository_file.workflow_deploy           |
+| github_repository_file.workflow_deploy["sso-by-vincent"]             | module.general["sso"].github_repository_file.workflow_deploy                 |
+| github_repository_file.workflow_deploy["tfstate"]                    | module.general["tfstate"].github_repository_file.workflow_deploy             |
+| github_repository_file.workflow_deploy["ttrss-by-vincent"]           | module.general["ttrss"].github_repository_file.workflow_deploy               |
+| github_repository_file.workflow_deploy["uptime-by-vincent"]          | module.general["uptime"].github_repository_file.workflow_deploy              |
+|                                                                      |
+| github_repository_topics.repos["api-uptime-by-vincent"]              | module.subdomain["api.uptime"].github_repository_topics.repos                |
+| github_repository_topics.repos["homeassistant-by-vincent"]           | module.subdomain["homeassistant"].github_repository_topics.repos             |
+| github_repository_topics.repos["sso-by-vincent"]                     | module.subdomain["sso"].github_repository_topics.repos                       |
+| github_repository_topics.repos["ttrss-by-vincent"]                   | module.subdomain["ttrss"].github_repository_topics.repos                     |
+| github_repository_topics.repos["uptime-by-vincent"]                  | module.subdomain["uptime"].github_repository_topics.repos                    |

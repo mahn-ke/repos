@@ -1,0 +1,6 @@
+{
+    "name": "$REPOSITORY",
+    "scripts": {
+        "start": "node main.js"
+    }
+}

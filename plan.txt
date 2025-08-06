@@ -1,0 +1,1258 @@
+[0m[1mmodule.subdomain["homeassistant"].github_repository_topics.repos: Refreshing state... [id=homeassistant-by-vincent][0m
+[0m[1mmodule.subdomain["uptime"].github_repository_topics.repos: Refreshing state... [id=uptime-by-vincent][0m
+[0m[1mmodule.subdomain["ttrss"].github_repository_topics.repos: Refreshing state... [id=ttrss-by-vincent][0m
+[0m[1mmodule.subdomain["sso"].github_repository_topics.repos: Refreshing state... [id=sso-by-vincent][0m
+[0m[1mmodule.subdomain["api.uptime"].github_repository_topics.repos: Refreshing state... [id=api-uptime-by-vincent][0m
+[0m[1mmodule.general[".github"].github_repository.repos: Refreshing state... [id=.github][0m
+[0m[1mmodule.general["fah-break"].github_repository.repos: Refreshing state... [id=fah-break][0m
+[0m[1mmodule.general["resources"].github_repository.repos: Refreshing state... [id=resources][0m
+[0m[1mmodule.general["api.uptime"].github_repository.repos: Refreshing state... [id=api-uptime-by-vincent][0m
+[0m[1mmodule.general["tfstate"].github_repository.repos: Refreshing state... [id=tfstate][0m
+[0m[1mmodule.general["uptime"].github_repository.repos: Refreshing state... [id=uptime-by-vincent][0m
+[0m[1mmodule.general["homeassistant"].github_repository.repos: Refreshing state... [id=homeassistant-by-vincent][0m
+[0m[1mmodule.general["repos"].github_repository.repos: Refreshing state... [id=repos][0m
+[0m[1mmodule.general["ttrss"].github_repository.repos: Refreshing state... [id=ttrss-by-vincent][0m
+[0m[1mmodule.general["ccc-event-tracker"].github_repository.repos: Refreshing state... [id=ccc-event-tracker][0m
+[0m[1mmodule.general["sso"].github_repository.repos: Refreshing state... [id=sso-by-vincent][0m
+[0m[1mmodule.general["tfstate"].github_repository_file.workflow_deploy: Refreshing state... [id=tfstate/.github/workflows/deploy.yml][0m
+[0m[1mmodule.general["homeassistant"].github_repository_file.workflow_deploy: Refreshing state... [id=homeassistant-by-vincent/.github/workflows/deploy.yml][0m
+[0m[1mmodule.general["uptime"].github_repository_file.workflow_deploy: Refreshing state... [id=uptime-by-vincent/.github/workflows/deploy.yml][0m
+[0m[1mmodule.general["sso"].github_repository_file.workflow_deploy: Refreshing state... [id=sso-by-vincent/.github/workflows/deploy.yml][0m
+[0m[1mmodule.general["ttrss"].github_repository_file.workflow_deploy: Refreshing state... [id=ttrss-by-vincent/.github/workflows/deploy.yml][0m
+[0m[1mmodule.general[".github"].github_repository_file.workflow_deploy: Refreshing state... [id=.github/.github/workflows/deploy.yml][0m
+[0m[1mmodule.general["api.uptime"].github_repository_file.workflow_deploy: Refreshing state... [id=api-uptime-by-vincent/.github/workflows/deploy.yml][0m
+[0m[1mmodule.general["repos"].github_repository_file.workflow_deploy: Refreshing state... [id=repos/.github/workflows/deploy.yml][0m
+[0m[1mmodule.general["ccc-event-tracker"].github_repository_file.workflow_deploy: Refreshing state... [id=ccc-event-tracker/.github/workflows/deploy.yml][0m
+[0m[1mmodule.general["fah-break"].github_repository_file.workflow_deploy: Refreshing state... [id=fah-break/.github/workflows/deploy.yml][0m
+[0m[1mmodule.general["resources"].github_repository_file.workflow_deploy: Refreshing state... [id=resources/.github/workflows/deploy.yml][0m
+[0m[1mgithub_repository_topics.repos["tfstate"]: Refreshing state... [id=tfstate][0m
+[0m[1mgithub_repository_topics.repos["ccc-event-tracker"]: Refreshing state... [id=ccc-event-tracker][0m
+[0m[1mgithub_repository_topics.repos["repos"]: Refreshing state... [id=repos][0m
+[0m[1mgithub_repository_topics.repos["resources"]: Refreshing state... [id=resources][0m
+[0m[1mgithub_repository_topics.repos["fah-break"]: Refreshing state... [id=fah-break][0m
+[0m[1mgithub_repository_topics.repos[".github"]: Refreshing state... [id=.github][0m
+[0m[1mdata.github_user.current: Reading...[0m[0m
+[0m[1mdata.github_user.current: Read complete after 2s [id=1689033][0m
+[0m[1mmodule.general["homeassistant"].github_repository_environment.production: Refreshing state... [id=homeassistant-by-vincent:production][0m
+[0m[1mmodule.general["sso"].github_repository_environment.production: Refreshing state... [id=sso-by-vincent:production][0m
+[0m[1mmodule.general["ttrss"].github_repository_environment.production: Refreshing state... [id=ttrss-by-vincent:production][0m
+[0m[1mmodule.general["tfstate"].github_repository_environment.production: Refreshing state... [id=tfstate:production][0m
+[0m[1mmodule.general["api.uptime"].github_repository_environment.production: Refreshing state... [id=api-uptime-by-vincent:production][0m
+[0m[1mmodule.general["uptime"].github_repository_environment.production: Refreshing state... [id=uptime-by-vincent:production][0m
+[0m[1mmodule.general[".github"].github_repository_environment.production: Refreshing state... [id=.github:production][0m
+[0m[1mmodule.general["ccc-event-tracker"].github_repository_environment.production: Refreshing state... [id=ccc-event-tracker:production][0m
+[0m[1mmodule.general["fah-break"].github_repository_environment.production: Refreshing state... [id=fah-break:production][0m
+[0m[1mmodule.general["repos"].github_repository_environment.production: Refreshing state... [id=repos:production][0m
+[0m[1mmodule.general["resources"].github_repository_environment.production: Refreshing state... [id=resources:production][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+  [31m-[0m destroy[0m
+
+Terraform will perform the following actions:
+
+[1m  # github_repository_topics.repos[".github"][0m will be [1m[31mdestroyed[0m
+  # (because github_repository_topics.repos is not in configuration)
+[0m  [31m-[0m[0m resource "github_repository_topics" "repos" {
+      [31m-[0m[0m id         = ".github" [90m-> null[0m[0m
+      [31m-[0m[0m repository = ".github" [90m-> null[0m[0m
+      [31m-[0m[0m topics     = [] [90m-> null[0m[0m
+    }
+
+[1m  # github_repository_topics.repos["ccc-event-tracker"][0m will be [1m[31mdestroyed[0m
+  # (because github_repository_topics.repos is not in configuration)
+[0m  [31m-[0m[0m resource "github_repository_topics" "repos" {
+      [31m-[0m[0m id         = "ccc-event-tracker" [90m-> null[0m[0m
+      [31m-[0m[0m repository = "ccc-event-tracker" [90m-> null[0m[0m
+      [31m-[0m[0m topics     = [] [90m-> null[0m[0m
+    }
+
+[1m  # github_repository_topics.repos["fah-break"][0m will be [1m[31mdestroyed[0m
+  # (because github_repository_topics.repos is not in configuration)
+[0m  [31m-[0m[0m resource "github_repository_topics" "repos" {
+      [31m-[0m[0m id         = "fah-break" [90m-> null[0m[0m
+      [31m-[0m[0m repository = "fah-break" [90m-> null[0m[0m
+      [31m-[0m[0m topics     = [] [90m-> null[0m[0m
+    }
+
+[1m  # github_repository_topics.repos["repos"][0m will be [1m[31mdestroyed[0m
+  # (because github_repository_topics.repos is not in configuration)
+[0m  [31m-[0m[0m resource "github_repository_topics" "repos" {
+      [31m-[0m[0m id         = "repos" [90m-> null[0m[0m
+      [31m-[0m[0m repository = "repos" [90m-> null[0m[0m
+      [31m-[0m[0m topics     = [] [90m-> null[0m[0m
+    }
+
+[1m  # github_repository_topics.repos["resources"][0m will be [1m[31mdestroyed[0m
+  # (because github_repository_topics.repos is not in configuration)
+[0m  [31m-[0m[0m resource "github_repository_topics" "repos" {
+      [31m-[0m[0m id         = "resources" [90m-> null[0m[0m
+      [31m-[0m[0m repository = "resources" [90m-> null[0m[0m
+      [31m-[0m[0m topics     = [] [90m-> null[0m[0m
+    }
+
+[1m  # github_repository_topics.repos["tfstate"][0m will be [1m[31mdestroyed[0m
+  # (because github_repository_topics.repos is not in configuration)
+[0m  [31m-[0m[0m resource "github_repository_topics" "repos" {
+      [31m-[0m[0m id         = "tfstate" [90m-> null[0m[0m
+      [31m-[0m[0m repository = "tfstate" [90m-> null[0m[0m
+      [31m-[0m[0m topics     = [] [90m-> null[0m[0m
+    }
+
+[1m  # module.general[".github"].github_repository.repos[0m will be created
+[0m  [32m+[0m[0m resource "github_repository" "repos" {
+      [32m+[0m[0m allow_auto_merge            = false
+      [32m+[0m[0m allow_merge_commit          = false
+      [32m+[0m[0m allow_rebase_merge          = true
+      [32m+[0m[0m allow_squash_merge          = true
+      [32m+[0m[0m archived                    = false
+      [32m+[0m[0m auto_init                   = false
+      [32m+[0m[0m default_branch              = (known after apply)
+      [32m+[0m[0m delete_branch_on_merge      = false
+      [32m+[0m[0m etag                        = (known after apply)
+      [32m+[0m[0m full_name                   = (known after apply)
+      [32m+[0m[0m git_clone_url               = (known after apply)
+      [32m+[0m[0m has_downloads               = false
+      [32m+[0m[0m has_issues                  = true
+      [32m+[0m[0m has_projects                = false
+      [32m+[0m[0m has_wiki                    = false
+      [32m+[0m[0m html_url                    = (known after apply)
+      [32m+[0m[0m http_clone_url              = (known after apply)
+      [32m+[0m[0m id                          = (known after apply)
+      [32m+[0m[0m license_template            = "gpl-3.0"
+      [32m+[0m[0m merge_commit_message        = "PR_TITLE"
+      [32m+[0m[0m merge_commit_title          = "MERGE_MESSAGE"
+      [32m+[0m[0m name                        = ".github"
+      [32m+[0m[0m node_id                     = (known after apply)
+      [32m+[0m[0m primary_language            = (known after apply)
+      [32m+[0m[0m private                     = (known after apply)
+      [32m+[0m[0m repo_id                     = (known after apply)
+      [32m+[0m[0m squash_merge_commit_message = "PR_BODY"
+      [32m+[0m[0m squash_merge_commit_title   = "PR_TITLE"
+      [32m+[0m[0m ssh_clone_url               = (known after apply)
+      [32m+[0m[0m svn_url                     = (known after apply)
+      [32m+[0m[0m topics                      = (known after apply)
+      [32m+[0m[0m visibility                  = "public"
+      [32m+[0m[0m vulnerability_alerts        = true
+      [32m+[0m[0m web_commit_signoff_required = false
+
+      [32m+[0m[0m security_and_analysis (known after apply)
+    }
+
+[1m  # module.general[".github"].github_repository_environment.production[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_environment" "production" {
+      [32m+[0m[0m can_admins_bypass   = true
+      [32m+[0m[0m environment         = "production"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m prevent_self_review = false
+      [32m+[0m[0m repository          = ".github"
+
+      [32m+[0m[0m reviewers {
+          [32m+[0m[0m users = [
+              [32m+[0m[0m 1689033,
+            ]
+        }
+    }
+
+[1m  # module.general[".github"].github_repository_file.workflow_deploy[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_file" "workflow_deploy" {
+      [32m+[0m[0m autocreate_branch_source_sha = (known after apply)
+      [32m+[0m[0m commit_message               = (known after apply)
+      [32m+[0m[0m commit_sha                   = (known after apply)
+      [32m+[0m[0m content                      = <<-EOT
+            name: Deploy service, generate certificates, and update NGINX configuration
+            
+            on:
+              push:
+                branches: [ "main" ]
+              workflow_dispatch:
+            
+            concurrency:
+              group: deploy-${{ github.ref }}
+              cancel-in-progress: true
+            
+            jobs:
+              deploy:
+                uses: mahn-ke/.github/.github/workflows/template.yml@main
+                secrets: inherit
+        EOT
+      [32m+[0m[0m file                         = ".github/workflows/deploy.yml"
+      [32m+[0m[0m id                           = (known after apply)
+      [32m+[0m[0m overwrite_on_create          = true
+      [32m+[0m[0m ref                          = (known after apply)
+      [32m+[0m[0m repository                   = ".github"
+      [32m+[0m[0m sha                          = (known after apply)
+    }
+
+[1m  # module.general["api.uptime"].github_repository.repos[0m will be created
+[0m  [32m+[0m[0m resource "github_repository" "repos" {
+      [32m+[0m[0m allow_auto_merge            = false
+      [32m+[0m[0m allow_merge_commit          = false
+      [32m+[0m[0m allow_rebase_merge          = true
+      [32m+[0m[0m allow_squash_merge          = true
+      [32m+[0m[0m archived                    = false
+      [32m+[0m[0m auto_init                   = false
+      [32m+[0m[0m default_branch              = (known after apply)
+      [32m+[0m[0m delete_branch_on_merge      = false
+      [32m+[0m[0m etag                        = (known after apply)
+      [32m+[0m[0m full_name                   = (known after apply)
+      [32m+[0m[0m git_clone_url               = (known after apply)
+      [32m+[0m[0m has_downloads               = false
+      [32m+[0m[0m has_issues                  = true
+      [32m+[0m[0m has_projects                = false
+      [32m+[0m[0m has_wiki                    = false
+      [32m+[0m[0m html_url                    = (known after apply)
+      [32m+[0m[0m http_clone_url              = (known after apply)
+      [32m+[0m[0m id                          = (known after apply)
+      [32m+[0m[0m license_template            = "gpl-3.0"
+      [32m+[0m[0m merge_commit_message        = "PR_TITLE"
+      [32m+[0m[0m merge_commit_title          = "MERGE_MESSAGE"
+      [32m+[0m[0m name                        = "api.uptime"
+      [32m+[0m[0m node_id                     = (known after apply)
+      [32m+[0m[0m primary_language            = (known after apply)
+      [32m+[0m[0m private                     = (known after apply)
+      [32m+[0m[0m repo_id                     = (known after apply)
+      [32m+[0m[0m squash_merge_commit_message = "PR_BODY"
+      [32m+[0m[0m squash_merge_commit_title   = "PR_TITLE"
+      [32m+[0m[0m ssh_clone_url               = (known after apply)
+      [32m+[0m[0m svn_url                     = (known after apply)
+      [32m+[0m[0m topics                      = (known after apply)
+      [32m+[0m[0m visibility                  = "public"
+      [32m+[0m[0m vulnerability_alerts        = true
+      [32m+[0m[0m web_commit_signoff_required = false
+
+      [32m+[0m[0m security_and_analysis (known after apply)
+    }
+
+[1m  # module.general["api.uptime"].github_repository_environment.production[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_environment" "production" {
+      [32m+[0m[0m can_admins_bypass   = true
+      [32m+[0m[0m environment         = "production"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m prevent_self_review = false
+      [32m+[0m[0m repository          = "api.uptime"
+
+      [32m+[0m[0m reviewers {
+          [32m+[0m[0m users = [
+              [32m+[0m[0m 1689033,
+            ]
+        }
+    }
+
+[1m  # module.general["api.uptime"].github_repository_file.workflow_deploy[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_file" "workflow_deploy" {
+      [32m+[0m[0m autocreate_branch_source_sha = (known after apply)
+      [32m+[0m[0m commit_message               = (known after apply)
+      [32m+[0m[0m commit_sha                   = (known after apply)
+      [32m+[0m[0m content                      = <<-EOT
+            name: Deploy service, generate certificates, and update NGINX configuration
+            
+            on:
+              push:
+                branches: [ "main" ]
+              workflow_dispatch:
+            
+            concurrency:
+              group: deploy-${{ github.ref }}
+              cancel-in-progress: true
+            
+            jobs:
+              deploy:
+                uses: mahn-ke/.github/.github/workflows/template.yml@main
+                secrets: inherit
+        EOT
+      [32m+[0m[0m file                         = ".github/workflows/deploy.yml"
+      [32m+[0m[0m id                           = (known after apply)
+      [32m+[0m[0m overwrite_on_create          = true
+      [32m+[0m[0m ref                          = (known after apply)
+      [32m+[0m[0m repository                   = "api.uptime"
+      [32m+[0m[0m sha                          = (known after apply)
+    }
+
+[1m  # module.general["ccc-event-tracker"].github_repository.repos[0m will be created
+[0m  [32m+[0m[0m resource "github_repository" "repos" {
+      [32m+[0m[0m allow_auto_merge            = false
+      [32m+[0m[0m allow_merge_commit          = false
+      [32m+[0m[0m allow_rebase_merge          = true
+      [32m+[0m[0m allow_squash_merge          = true
+      [32m+[0m[0m archived                    = false
+      [32m+[0m[0m auto_init                   = false
+      [32m+[0m[0m default_branch              = (known after apply)
+      [32m+[0m[0m delete_branch_on_merge      = false
+      [32m+[0m[0m etag                        = (known after apply)
+      [32m+[0m[0m full_name                   = (known after apply)
+      [32m+[0m[0m git_clone_url               = (known after apply)
+      [32m+[0m[0m has_downloads               = false
+      [32m+[0m[0m has_issues                  = true
+      [32m+[0m[0m has_projects                = false
+      [32m+[0m[0m has_wiki                    = false
+      [32m+[0m[0m html_url                    = (known after apply)
+      [32m+[0m[0m http_clone_url              = (known after apply)
+      [32m+[0m[0m id                          = (known after apply)
+      [32m+[0m[0m license_template            = "gpl-3.0"
+      [32m+[0m[0m merge_commit_message        = "PR_TITLE"
+      [32m+[0m[0m merge_commit_title          = "MERGE_MESSAGE"
+      [32m+[0m[0m name                        = "ccc-event-tracker"
+      [32m+[0m[0m node_id                     = (known after apply)
+      [32m+[0m[0m primary_language            = (known after apply)
+      [32m+[0m[0m private                     = (known after apply)
+      [32m+[0m[0m repo_id                     = (known after apply)
+      [32m+[0m[0m squash_merge_commit_message = "PR_BODY"
+      [32m+[0m[0m squash_merge_commit_title   = "PR_TITLE"
+      [32m+[0m[0m ssh_clone_url               = (known after apply)
+      [32m+[0m[0m svn_url                     = (known after apply)
+      [32m+[0m[0m topics                      = (known after apply)
+      [32m+[0m[0m visibility                  = "public"
+      [32m+[0m[0m vulnerability_alerts        = true
+      [32m+[0m[0m web_commit_signoff_required = false
+
+      [32m+[0m[0m security_and_analysis (known after apply)
+    }
+
+[1m  # module.general["ccc-event-tracker"].github_repository_environment.production[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_environment" "production" {
+      [32m+[0m[0m can_admins_bypass   = true
+      [32m+[0m[0m environment         = "production"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m prevent_self_review = false
+      [32m+[0m[0m repository          = "ccc-event-tracker"
+
+      [32m+[0m[0m reviewers {
+          [32m+[0m[0m users = [
+              [32m+[0m[0m 1689033,
+            ]
+        }
+    }
+
+[1m  # module.general["ccc-event-tracker"].github_repository_file.workflow_deploy[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_file" "workflow_deploy" {
+      [32m+[0m[0m autocreate_branch_source_sha = (known after apply)
+      [32m+[0m[0m commit_message               = (known after apply)
+      [32m+[0m[0m commit_sha                   = (known after apply)
+      [32m+[0m[0m content                      = <<-EOT
+            name: Deploy service, generate certificates, and update NGINX configuration
+            
+            on:
+              push:
+                branches: [ "main" ]
+              workflow_dispatch:
+            
+            concurrency:
+              group: deploy-${{ github.ref }}
+              cancel-in-progress: true
+            
+            jobs:
+              deploy:
+                uses: mahn-ke/.github/.github/workflows/template.yml@main
+                secrets: inherit
+        EOT
+      [32m+[0m[0m file                         = ".github/workflows/deploy.yml"
+      [32m+[0m[0m id                           = (known after apply)
+      [32m+[0m[0m overwrite_on_create          = true
+      [32m+[0m[0m ref                          = (known after apply)
+      [32m+[0m[0m repository                   = "ccc-event-tracker"
+      [32m+[0m[0m sha                          = (known after apply)
+    }
+
+[1m  # module.general["fah-break"].github_repository.repos[0m will be created
+[0m  [32m+[0m[0m resource "github_repository" "repos" {
+      [32m+[0m[0m allow_auto_merge            = false
+      [32m+[0m[0m allow_merge_commit          = false
+      [32m+[0m[0m allow_rebase_merge          = true
+      [32m+[0m[0m allow_squash_merge          = true
+      [32m+[0m[0m archived                    = false
+      [32m+[0m[0m auto_init                   = false
+      [32m+[0m[0m default_branch              = (known after apply)
+      [32m+[0m[0m delete_branch_on_merge      = false
+      [32m+[0m[0m etag                        = (known after apply)
+      [32m+[0m[0m full_name                   = (known after apply)
+      [32m+[0m[0m git_clone_url               = (known after apply)
+      [32m+[0m[0m has_downloads               = false
+      [32m+[0m[0m has_issues                  = true
+      [32m+[0m[0m has_projects                = false
+      [32m+[0m[0m has_wiki                    = false
+      [32m+[0m[0m html_url                    = (known after apply)
+      [32m+[0m[0m http_clone_url              = (known after apply)
+      [32m+[0m[0m id                          = (known after apply)
+      [32m+[0m[0m license_template            = "gpl-3.0"
+      [32m+[0m[0m merge_commit_message        = "PR_TITLE"
+      [32m+[0m[0m merge_commit_title          = "MERGE_MESSAGE"
+      [32m+[0m[0m name                        = "fah-break"
+      [32m+[0m[0m node_id                     = (known after apply)
+      [32m+[0m[0m primary_language            = (known after apply)
+      [32m+[0m[0m private                     = (known after apply)
+      [32m+[0m[0m repo_id                     = (known after apply)
+      [32m+[0m[0m squash_merge_commit_message = "PR_BODY"
+      [32m+[0m[0m squash_merge_commit_title   = "PR_TITLE"
+      [32m+[0m[0m ssh_clone_url               = (known after apply)
+      [32m+[0m[0m svn_url                     = (known after apply)
+      [32m+[0m[0m topics                      = (known after apply)
+      [32m+[0m[0m visibility                  = "public"
+      [32m+[0m[0m vulnerability_alerts        = true
+      [32m+[0m[0m web_commit_signoff_required = false
+
+      [32m+[0m[0m security_and_analysis (known after apply)
+    }
+
+[1m  # module.general["fah-break"].github_repository_environment.production[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_environment" "production" {
+      [32m+[0m[0m can_admins_bypass   = true
+      [32m+[0m[0m environment         = "production"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m prevent_self_review = false
+      [32m+[0m[0m repository          = "fah-break"
+
+      [32m+[0m[0m reviewers {
+          [32m+[0m[0m users = [
+              [32m+[0m[0m 1689033,
+            ]
+        }
+    }
+
+[1m  # module.general["fah-break"].github_repository_file.workflow_deploy[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_file" "workflow_deploy" {
+      [32m+[0m[0m autocreate_branch_source_sha = (known after apply)
+      [32m+[0m[0m commit_message               = (known after apply)
+      [32m+[0m[0m commit_sha                   = (known after apply)
+      [32m+[0m[0m content                      = <<-EOT
+            name: Deploy service, generate certificates, and update NGINX configuration
+            
+            on:
+              push:
+                branches: [ "main" ]
+              workflow_dispatch:
+            
+            concurrency:
+              group: deploy-${{ github.ref }}
+              cancel-in-progress: true
+            
+            jobs:
+              deploy:
+                uses: mahn-ke/.github/.github/workflows/template.yml@main
+                secrets: inherit
+        EOT
+      [32m+[0m[0m file                         = ".github/workflows/deploy.yml"
+      [32m+[0m[0m id                           = (known after apply)
+      [32m+[0m[0m overwrite_on_create          = true
+      [32m+[0m[0m ref                          = (known after apply)
+      [32m+[0m[0m repository                   = "fah-break"
+      [32m+[0m[0m sha                          = (known after apply)
+    }
+
+[1m  # module.general["homeassistant"].github_repository.repos[0m will be created
+[0m  [32m+[0m[0m resource "github_repository" "repos" {
+      [32m+[0m[0m allow_auto_merge            = false
+      [32m+[0m[0m allow_merge_commit          = false
+      [32m+[0m[0m allow_rebase_merge          = true
+      [32m+[0m[0m allow_squash_merge          = true
+      [32m+[0m[0m archived                    = false
+      [32m+[0m[0m auto_init                   = false
+      [32m+[0m[0m default_branch              = (known after apply)
+      [32m+[0m[0m delete_branch_on_merge      = false
+      [32m+[0m[0m etag                        = (known after apply)
+      [32m+[0m[0m full_name                   = (known after apply)
+      [32m+[0m[0m git_clone_url               = (known after apply)
+      [32m+[0m[0m has_downloads               = false
+      [32m+[0m[0m has_issues                  = true
+      [32m+[0m[0m has_projects                = false
+      [32m+[0m[0m has_wiki                    = false
+      [32m+[0m[0m html_url                    = (known after apply)
+      [32m+[0m[0m http_clone_url              = (known after apply)
+      [32m+[0m[0m id                          = (known after apply)
+      [32m+[0m[0m license_template            = "gpl-3.0"
+      [32m+[0m[0m merge_commit_message        = "PR_TITLE"
+      [32m+[0m[0m merge_commit_title          = "MERGE_MESSAGE"
+      [32m+[0m[0m name                        = "homeassistant"
+      [32m+[0m[0m node_id                     = (known after apply)
+      [32m+[0m[0m primary_language            = (known after apply)
+      [32m+[0m[0m private                     = (known after apply)
+      [32m+[0m[0m repo_id                     = (known after apply)
+      [32m+[0m[0m squash_merge_commit_message = "PR_BODY"
+      [32m+[0m[0m squash_merge_commit_title   = "PR_TITLE"
+      [32m+[0m[0m ssh_clone_url               = (known after apply)
+      [32m+[0m[0m svn_url                     = (known after apply)
+      [32m+[0m[0m topics                      = (known after apply)
+      [32m+[0m[0m visibility                  = "public"
+      [32m+[0m[0m vulnerability_alerts        = true
+      [32m+[0m[0m web_commit_signoff_required = false
+
+      [32m+[0m[0m security_and_analysis (known after apply)
+    }
+
+[1m  # module.general["homeassistant"].github_repository_environment.production[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_environment" "production" {
+      [32m+[0m[0m can_admins_bypass   = true
+      [32m+[0m[0m environment         = "production"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m prevent_self_review = false
+      [32m+[0m[0m repository          = "homeassistant"
+
+      [32m+[0m[0m reviewers {
+          [32m+[0m[0m users = [
+              [32m+[0m[0m 1689033,
+            ]
+        }
+    }
+
+[1m  # module.general["homeassistant"].github_repository_file.workflow_deploy[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_file" "workflow_deploy" {
+      [32m+[0m[0m autocreate_branch_source_sha = (known after apply)
+      [32m+[0m[0m commit_message               = (known after apply)
+      [32m+[0m[0m commit_sha                   = (known after apply)
+      [32m+[0m[0m content                      = <<-EOT
+            name: Deploy service, generate certificates, and update NGINX configuration
+            
+            on:
+              push:
+                branches: [ "main" ]
+              workflow_dispatch:
+            
+            concurrency:
+              group: deploy-${{ github.ref }}
+              cancel-in-progress: true
+            
+            jobs:
+              deploy:
+                uses: mahn-ke/.github/.github/workflows/template.yml@main
+                secrets: inherit
+        EOT
+      [32m+[0m[0m file                         = ".github/workflows/deploy.yml"
+      [32m+[0m[0m id                           = (known after apply)
+      [32m+[0m[0m overwrite_on_create          = true
+      [32m+[0m[0m ref                          = (known after apply)
+      [32m+[0m[0m repository                   = "homeassistant"
+      [32m+[0m[0m sha                          = (known after apply)
+    }
+
+[1m  # module.general["repos"].github_repository.repos[0m will be created
+[0m  [32m+[0m[0m resource "github_repository" "repos" {
+      [32m+[0m[0m allow_auto_merge            = false
+      [32m+[0m[0m allow_merge_commit          = false
+      [32m+[0m[0m allow_rebase_merge          = true
+      [32m+[0m[0m allow_squash_merge          = true
+      [32m+[0m[0m archived                    = false
+      [32m+[0m[0m auto_init                   = false
+      [32m+[0m[0m default_branch              = (known after apply)
+      [32m+[0m[0m delete_branch_on_merge      = false
+      [32m+[0m[0m etag                        = (known after apply)
+      [32m+[0m[0m full_name                   = (known after apply)
+      [32m+[0m[0m git_clone_url               = (known after apply)
+      [32m+[0m[0m has_downloads               = false
+      [32m+[0m[0m has_issues                  = true
+      [32m+[0m[0m has_projects                = false
+      [32m+[0m[0m has_wiki                    = false
+      [32m+[0m[0m html_url                    = (known after apply)
+      [32m+[0m[0m http_clone_url              = (known after apply)
+      [32m+[0m[0m id                          = (known after apply)
+      [32m+[0m[0m license_template            = "gpl-3.0"
+      [32m+[0m[0m merge_commit_message        = "PR_TITLE"
+      [32m+[0m[0m merge_commit_title          = "MERGE_MESSAGE"
+      [32m+[0m[0m name                        = "repos"
+      [32m+[0m[0m node_id                     = (known after apply)
+      [32m+[0m[0m primary_language            = (known after apply)
+      [32m+[0m[0m private                     = (known after apply)
+      [32m+[0m[0m repo_id                     = (known after apply)
+      [32m+[0m[0m squash_merge_commit_message = "PR_BODY"
+      [32m+[0m[0m squash_merge_commit_title   = "PR_TITLE"
+      [32m+[0m[0m ssh_clone_url               = (known after apply)
+      [32m+[0m[0m svn_url                     = (known after apply)
+      [32m+[0m[0m topics                      = (known after apply)
+      [32m+[0m[0m visibility                  = "public"
+      [32m+[0m[0m vulnerability_alerts        = true
+      [32m+[0m[0m web_commit_signoff_required = false
+
+      [32m+[0m[0m security_and_analysis (known after apply)
+    }
+
+[1m  # module.general["repos"].github_repository_environment.production[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_environment" "production" {
+      [32m+[0m[0m can_admins_bypass   = true
+      [32m+[0m[0m environment         = "production"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m prevent_self_review = false
+      [32m+[0m[0m repository          = "repos"
+
+      [32m+[0m[0m reviewers {
+          [32m+[0m[0m users = [
+              [32m+[0m[0m 1689033,
+            ]
+        }
+    }
+
+[1m  # module.general["repos"].github_repository_file.workflow_deploy[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_file" "workflow_deploy" {
+      [32m+[0m[0m autocreate_branch_source_sha = (known after apply)
+      [32m+[0m[0m commit_message               = (known after apply)
+      [32m+[0m[0m commit_sha                   = (known after apply)
+      [32m+[0m[0m content                      = <<-EOT
+            name: Deploy service, generate certificates, and update NGINX configuration
+            
+            on:
+              push:
+                branches: [ "main" ]
+              workflow_dispatch:
+            
+            concurrency:
+              group: deploy-${{ github.ref }}
+              cancel-in-progress: true
+            
+            jobs:
+              deploy:
+                uses: mahn-ke/.github/.github/workflows/template.yml@main
+                secrets: inherit
+        EOT
+      [32m+[0m[0m file                         = ".github/workflows/deploy.yml"
+      [32m+[0m[0m id                           = (known after apply)
+      [32m+[0m[0m overwrite_on_create          = true
+      [32m+[0m[0m ref                          = (known after apply)
+      [32m+[0m[0m repository                   = "repos"
+      [32m+[0m[0m sha                          = (known after apply)
+    }
+
+[1m  # module.general["resources"].github_repository.repos[0m will be created
+[0m  [32m+[0m[0m resource "github_repository" "repos" {
+      [32m+[0m[0m allow_auto_merge            = false
+      [32m+[0m[0m allow_merge_commit          = false
+      [32m+[0m[0m allow_rebase_merge          = true
+      [32m+[0m[0m allow_squash_merge          = true
+      [32m+[0m[0m archived                    = false
+      [32m+[0m[0m auto_init                   = false
+      [32m+[0m[0m default_branch              = (known after apply)
+      [32m+[0m[0m delete_branch_on_merge      = false
+      [32m+[0m[0m etag                        = (known after apply)
+      [32m+[0m[0m full_name                   = (known after apply)
+      [32m+[0m[0m git_clone_url               = (known after apply)
+      [32m+[0m[0m has_downloads               = false
+      [32m+[0m[0m has_issues                  = true
+      [32m+[0m[0m has_projects                = false
+      [32m+[0m[0m has_wiki                    = false
+      [32m+[0m[0m html_url                    = (known after apply)
+      [32m+[0m[0m http_clone_url              = (known after apply)
+      [32m+[0m[0m id                          = (known after apply)
+      [32m+[0m[0m license_template            = "gpl-3.0"
+      [32m+[0m[0m merge_commit_message        = "PR_TITLE"
+      [32m+[0m[0m merge_commit_title          = "MERGE_MESSAGE"
+      [32m+[0m[0m name                        = "resources"
+      [32m+[0m[0m node_id                     = (known after apply)
+      [32m+[0m[0m primary_language            = (known after apply)
+      [32m+[0m[0m private                     = (known after apply)
+      [32m+[0m[0m repo_id                     = (known after apply)
+      [32m+[0m[0m squash_merge_commit_message = "PR_BODY"
+      [32m+[0m[0m squash_merge_commit_title   = "PR_TITLE"
+      [32m+[0m[0m ssh_clone_url               = (known after apply)
+      [32m+[0m[0m svn_url                     = (known after apply)
+      [32m+[0m[0m topics                      = (known after apply)
+      [32m+[0m[0m visibility                  = "public"
+      [32m+[0m[0m vulnerability_alerts        = true
+      [32m+[0m[0m web_commit_signoff_required = false
+
+      [32m+[0m[0m security_and_analysis (known after apply)
+    }
+
+[1m  # module.general["resources"].github_repository_environment.production[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_environment" "production" {
+      [32m+[0m[0m can_admins_bypass   = true
+      [32m+[0m[0m environment         = "production"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m prevent_self_review = false
+      [32m+[0m[0m repository          = "resources"
+
+      [32m+[0m[0m reviewers {
+          [32m+[0m[0m users = [
+              [32m+[0m[0m 1689033,
+            ]
+        }
+    }
+
+[1m  # module.general["resources"].github_repository_file.workflow_deploy[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_file" "workflow_deploy" {
+      [32m+[0m[0m autocreate_branch_source_sha = (known after apply)
+      [32m+[0m[0m commit_message               = (known after apply)
+      [32m+[0m[0m commit_sha                   = (known after apply)
+      [32m+[0m[0m content                      = <<-EOT
+            name: Deploy service, generate certificates, and update NGINX configuration
+            
+            on:
+              push:
+                branches: [ "main" ]
+              workflow_dispatch:
+            
+            concurrency:
+              group: deploy-${{ github.ref }}
+              cancel-in-progress: true
+            
+            jobs:
+              deploy:
+                uses: mahn-ke/.github/.github/workflows/template.yml@main
+                secrets: inherit
+        EOT
+      [32m+[0m[0m file                         = ".github/workflows/deploy.yml"
+      [32m+[0m[0m id                           = (known after apply)
+      [32m+[0m[0m overwrite_on_create          = true
+      [32m+[0m[0m ref                          = (known after apply)
+      [32m+[0m[0m repository                   = "resources"
+      [32m+[0m[0m sha                          = (known after apply)
+    }
+
+[1m  # module.general["sso"].github_repository.repos[0m will be created
+[0m  [32m+[0m[0m resource "github_repository" "repos" {
+      [32m+[0m[0m allow_auto_merge            = false
+      [32m+[0m[0m allow_merge_commit          = false
+      [32m+[0m[0m allow_rebase_merge          = true
+      [32m+[0m[0m allow_squash_merge          = true
+      [32m+[0m[0m archived                    = false
+      [32m+[0m[0m auto_init                   = false
+      [32m+[0m[0m default_branch              = (known after apply)
+      [32m+[0m[0m delete_branch_on_merge      = false
+      [32m+[0m[0m etag                        = (known after apply)
+      [32m+[0m[0m full_name                   = (known after apply)
+      [32m+[0m[0m git_clone_url               = (known after apply)
+      [32m+[0m[0m has_downloads               = false
+      [32m+[0m[0m has_issues                  = true
+      [32m+[0m[0m has_projects                = false
+      [32m+[0m[0m has_wiki                    = false
+      [32m+[0m[0m html_url                    = (known after apply)
+      [32m+[0m[0m http_clone_url              = (known after apply)
+      [32m+[0m[0m id                          = (known after apply)
+      [32m+[0m[0m license_template            = "gpl-3.0"
+      [32m+[0m[0m merge_commit_message        = "PR_TITLE"
+      [32m+[0m[0m merge_commit_title          = "MERGE_MESSAGE"
+      [32m+[0m[0m name                        = "sso"
+      [32m+[0m[0m node_id                     = (known after apply)
+      [32m+[0m[0m primary_language            = (known after apply)
+      [32m+[0m[0m private                     = (known after apply)
+      [32m+[0m[0m repo_id                     = (known after apply)
+      [32m+[0m[0m squash_merge_commit_message = "PR_BODY"
+      [32m+[0m[0m squash_merge_commit_title   = "PR_TITLE"
+      [32m+[0m[0m ssh_clone_url               = (known after apply)
+      [32m+[0m[0m svn_url                     = (known after apply)
+      [32m+[0m[0m topics                      = (known after apply)
+      [32m+[0m[0m visibility                  = "public"
+      [32m+[0m[0m vulnerability_alerts        = true
+      [32m+[0m[0m web_commit_signoff_required = false
+
+      [32m+[0m[0m security_and_analysis (known after apply)
+    }
+
+[1m  # module.general["sso"].github_repository_environment.production[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_environment" "production" {
+      [32m+[0m[0m can_admins_bypass   = true
+      [32m+[0m[0m environment         = "production"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m prevent_self_review = false
+      [32m+[0m[0m repository          = "sso"
+
+      [32m+[0m[0m reviewers {
+          [32m+[0m[0m users = [
+              [32m+[0m[0m 1689033,
+            ]
+        }
+    }
+
+[1m  # module.general["sso"].github_repository_file.workflow_deploy[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_file" "workflow_deploy" {
+      [32m+[0m[0m autocreate_branch_source_sha = (known after apply)
+      [32m+[0m[0m commit_message               = (known after apply)
+      [32m+[0m[0m commit_sha                   = (known after apply)
+      [32m+[0m[0m content                      = <<-EOT
+            name: Deploy service, generate certificates, and update NGINX configuration
+            
+            on:
+              push:
+                branches: [ "main" ]
+              workflow_dispatch:
+            
+            concurrency:
+              group: deploy-${{ github.ref }}
+              cancel-in-progress: true
+            
+            jobs:
+              deploy:
+                uses: mahn-ke/.github/.github/workflows/template.yml@main
+                secrets: inherit
+        EOT
+      [32m+[0m[0m file                         = ".github/workflows/deploy.yml"
+      [32m+[0m[0m id                           = (known after apply)
+      [32m+[0m[0m overwrite_on_create          = true
+      [32m+[0m[0m ref                          = (known after apply)
+      [32m+[0m[0m repository                   = "sso"
+      [32m+[0m[0m sha                          = (known after apply)
+    }
+
+[1m  # module.general["tfstate"].github_repository.repos[0m will be created
+[0m  [32m+[0m[0m resource "github_repository" "repos" {
+      [32m+[0m[0m allow_auto_merge            = false
+      [32m+[0m[0m allow_merge_commit          = false
+      [32m+[0m[0m allow_rebase_merge          = true
+      [32m+[0m[0m allow_squash_merge          = true
+      [32m+[0m[0m archived                    = false
+      [32m+[0m[0m auto_init                   = false
+      [32m+[0m[0m default_branch              = (known after apply)
+      [32m+[0m[0m delete_branch_on_merge      = false
+      [32m+[0m[0m etag                        = (known after apply)
+      [32m+[0m[0m full_name                   = (known after apply)
+      [32m+[0m[0m git_clone_url               = (known after apply)
+      [32m+[0m[0m has_downloads               = false
+      [32m+[0m[0m has_issues                  = true
+      [32m+[0m[0m has_projects                = false
+      [32m+[0m[0m has_wiki                    = false
+      [32m+[0m[0m html_url                    = (known after apply)
+      [32m+[0m[0m http_clone_url              = (known after apply)
+      [32m+[0m[0m id                          = (known after apply)
+      [32m+[0m[0m license_template            = "gpl-3.0"
+      [32m+[0m[0m merge_commit_message        = "PR_TITLE"
+      [32m+[0m[0m merge_commit_title          = "MERGE_MESSAGE"
+      [32m+[0m[0m name                        = "tfstate"
+      [32m+[0m[0m node_id                     = (known after apply)
+      [32m+[0m[0m primary_language            = (known after apply)
+      [32m+[0m[0m private                     = (known after apply)
+      [32m+[0m[0m repo_id                     = (known after apply)
+      [32m+[0m[0m squash_merge_commit_message = "PR_BODY"
+      [32m+[0m[0m squash_merge_commit_title   = "PR_TITLE"
+      [32m+[0m[0m ssh_clone_url               = (known after apply)
+      [32m+[0m[0m svn_url                     = (known after apply)
+      [32m+[0m[0m topics                      = (known after apply)
+      [32m+[0m[0m visibility                  = "public"
+      [32m+[0m[0m vulnerability_alerts        = true
+      [32m+[0m[0m web_commit_signoff_required = false
+
+      [32m+[0m[0m security_and_analysis (known after apply)
+    }
+
+[1m  # module.general["tfstate"].github_repository_environment.production[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_environment" "production" {
+      [32m+[0m[0m can_admins_bypass   = true
+      [32m+[0m[0m environment         = "production"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m prevent_self_review = false
+      [32m+[0m[0m repository          = "tfstate"
+
+      [32m+[0m[0m reviewers {
+          [32m+[0m[0m users = [
+              [32m+[0m[0m 1689033,
+            ]
+        }
+    }
+
+[1m  # module.general["tfstate"].github_repository_file.workflow_deploy[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_file" "workflow_deploy" {
+      [32m+[0m[0m autocreate_branch_source_sha = (known after apply)
+      [32m+[0m[0m commit_message               = (known after apply)
+      [32m+[0m[0m commit_sha                   = (known after apply)
+      [32m+[0m[0m content                      = <<-EOT
+            name: Deploy service, generate certificates, and update NGINX configuration
+            
+            on:
+              push:
+                branches: [ "main" ]
+              workflow_dispatch:
+            
+            concurrency:
+              group: deploy-${{ github.ref }}
+              cancel-in-progress: true
+            
+            jobs:
+              deploy:
+                uses: mahn-ke/.github/.github/workflows/template.yml@main
+                secrets: inherit
+        EOT
+      [32m+[0m[0m file                         = ".github/workflows/deploy.yml"
+      [32m+[0m[0m id                           = (known after apply)
+      [32m+[0m[0m overwrite_on_create          = true
+      [32m+[0m[0m ref                          = (known after apply)
+      [32m+[0m[0m repository                   = "tfstate"
+      [32m+[0m[0m sha                          = (known after apply)
+    }
+
+[1m  # module.general["ttrss"].github_repository.repos[0m will be created
+[0m  [32m+[0m[0m resource "github_repository" "repos" {
+      [32m+[0m[0m allow_auto_merge            = false
+      [32m+[0m[0m allow_merge_commit          = false
+      [32m+[0m[0m allow_rebase_merge          = true
+      [32m+[0m[0m allow_squash_merge          = true
+      [32m+[0m[0m archived                    = false
+      [32m+[0m[0m auto_init                   = false
+      [32m+[0m[0m default_branch              = (known after apply)
+      [32m+[0m[0m delete_branch_on_merge      = false
+      [32m+[0m[0m etag                        = (known after apply)
+      [32m+[0m[0m full_name                   = (known after apply)
+      [32m+[0m[0m git_clone_url               = (known after apply)
+      [32m+[0m[0m has_downloads               = false
+      [32m+[0m[0m has_issues                  = true
+      [32m+[0m[0m has_projects                = false
+      [32m+[0m[0m has_wiki                    = false
+      [32m+[0m[0m html_url                    = (known after apply)
+      [32m+[0m[0m http_clone_url              = (known after apply)
+      [32m+[0m[0m id                          = (known after apply)
+      [32m+[0m[0m license_template            = "gpl-3.0"
+      [32m+[0m[0m merge_commit_message        = "PR_TITLE"
+      [32m+[0m[0m merge_commit_title          = "MERGE_MESSAGE"
+      [32m+[0m[0m name                        = "ttrss"
+      [32m+[0m[0m node_id                     = (known after apply)
+      [32m+[0m[0m primary_language            = (known after apply)
+      [32m+[0m[0m private                     = (known after apply)
+      [32m+[0m[0m repo_id                     = (known after apply)
+      [32m+[0m[0m squash_merge_commit_message = "PR_BODY"
+      [32m+[0m[0m squash_merge_commit_title   = "PR_TITLE"
+      [32m+[0m[0m ssh_clone_url               = (known after apply)
+      [32m+[0m[0m svn_url                     = (known after apply)
+      [32m+[0m[0m topics                      = (known after apply)
+      [32m+[0m[0m visibility                  = "public"
+      [32m+[0m[0m vulnerability_alerts        = true
+      [32m+[0m[0m web_commit_signoff_required = false
+
+      [32m+[0m[0m security_and_analysis (known after apply)
+    }
+
+[1m  # module.general["ttrss"].github_repository_environment.production[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_environment" "production" {
+      [32m+[0m[0m can_admins_bypass   = true
+      [32m+[0m[0m environment         = "production"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m prevent_self_review = false
+      [32m+[0m[0m repository          = "ttrss"
+
+      [32m+[0m[0m reviewers {
+          [32m+[0m[0m users = [
+              [32m+[0m[0m 1689033,
+            ]
+        }
+    }
+
+[1m  # module.general["ttrss"].github_repository_file.workflow_deploy[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_file" "workflow_deploy" {
+      [32m+[0m[0m autocreate_branch_source_sha = (known after apply)
+      [32m+[0m[0m commit_message               = (known after apply)
+      [32m+[0m[0m commit_sha                   = (known after apply)
+      [32m+[0m[0m content                      = <<-EOT
+            name: Deploy service, generate certificates, and update NGINX configuration
+            
+            on:
+              push:
+                branches: [ "main" ]
+              workflow_dispatch:
+            
+            concurrency:
+              group: deploy-${{ github.ref }}
+              cancel-in-progress: true
+            
+            jobs:
+              deploy:
+                uses: mahn-ke/.github/.github/workflows/template.yml@main
+                secrets: inherit
+        EOT
+      [32m+[0m[0m file                         = ".github/workflows/deploy.yml"
+      [32m+[0m[0m id                           = (known after apply)
+      [32m+[0m[0m overwrite_on_create          = true
+      [32m+[0m[0m ref                          = (known after apply)
+      [32m+[0m[0m repository                   = "ttrss"
+      [32m+[0m[0m sha                          = (known after apply)
+    }
+
+[1m  # module.general["uptime"].github_repository.repos[0m will be created
+[0m  [32m+[0m[0m resource "github_repository" "repos" {
+      [32m+[0m[0m allow_auto_merge            = false
+      [32m+[0m[0m allow_merge_commit          = false
+      [32m+[0m[0m allow_rebase_merge          = true
+      [32m+[0m[0m allow_squash_merge          = true
+      [32m+[0m[0m archived                    = false
+      [32m+[0m[0m auto_init                   = false
+      [32m+[0m[0m default_branch              = (known after apply)
+      [32m+[0m[0m delete_branch_on_merge      = false
+      [32m+[0m[0m etag                        = (known after apply)
+      [32m+[0m[0m full_name                   = (known after apply)
+      [32m+[0m[0m git_clone_url               = (known after apply)
+      [32m+[0m[0m has_downloads               = false
+      [32m+[0m[0m has_issues                  = true
+      [32m+[0m[0m has_projects                = false
+      [32m+[0m[0m has_wiki                    = false
+      [32m+[0m[0m html_url                    = (known after apply)
+      [32m+[0m[0m http_clone_url              = (known after apply)
+      [32m+[0m[0m id                          = (known after apply)
+      [32m+[0m[0m license_template            = "gpl-3.0"
+      [32m+[0m[0m merge_commit_message        = "PR_TITLE"
+      [32m+[0m[0m merge_commit_title          = "MERGE_MESSAGE"
+      [32m+[0m[0m name                        = "uptime"
+      [32m+[0m[0m node_id                     = (known after apply)
+      [32m+[0m[0m primary_language            = (known after apply)
+      [32m+[0m[0m private                     = (known after apply)
+      [32m+[0m[0m repo_id                     = (known after apply)
+      [32m+[0m[0m squash_merge_commit_message = "PR_BODY"
+      [32m+[0m[0m squash_merge_commit_title   = "PR_TITLE"
+      [32m+[0m[0m ssh_clone_url               = (known after apply)
+      [32m+[0m[0m svn_url                     = (known after apply)
+      [32m+[0m[0m topics                      = (known after apply)
+      [32m+[0m[0m visibility                  = "public"
+      [32m+[0m[0m vulnerability_alerts        = true
+      [32m+[0m[0m web_commit_signoff_required = false
+
+      [32m+[0m[0m security_and_analysis (known after apply)
+    }
+
+[1m  # module.general["uptime"].github_repository_environment.production[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_environment" "production" {
+      [32m+[0m[0m can_admins_bypass   = true
+      [32m+[0m[0m environment         = "production"
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m prevent_self_review = false
+      [32m+[0m[0m repository          = "uptime"
+
+      [32m+[0m[0m reviewers {
+          [32m+[0m[0m users = [
+              [32m+[0m[0m 1689033,
+            ]
+        }
+    }
+
+[1m  # module.general["uptime"].github_repository_file.workflow_deploy[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_file" "workflow_deploy" {
+      [32m+[0m[0m autocreate_branch_source_sha = (known after apply)
+      [32m+[0m[0m commit_message               = (known after apply)
+      [32m+[0m[0m commit_sha                   = (known after apply)
+      [32m+[0m[0m content                      = <<-EOT
+            name: Deploy service, generate certificates, and update NGINX configuration
+            
+            on:
+              push:
+                branches: [ "main" ]
+              workflow_dispatch:
+            
+            concurrency:
+              group: deploy-${{ github.ref }}
+              cancel-in-progress: true
+            
+            jobs:
+              deploy:
+                uses: mahn-ke/.github/.github/workflows/template.yml@main
+                secrets: inherit
+        EOT
+      [32m+[0m[0m file                         = ".github/workflows/deploy.yml"
+      [32m+[0m[0m id                           = (known after apply)
+      [32m+[0m[0m overwrite_on_create          = true
+      [32m+[0m[0m ref                          = (known after apply)
+      [32m+[0m[0m repository                   = "uptime"
+      [32m+[0m[0m sha                          = (known after apply)
+    }
+
+[1m  # module.nodejs["ccc-event-tracker"].github_repository_file.dockerfile[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_file" "dockerfile" {
+      [32m+[0m[0m autocreate_branch_source_sha = (known after apply)
+      [32m+[0m[0m commit_message               = (known after apply)
+      [32m+[0m[0m commit_sha                   = (known after apply)
+      [32m+[0m[0m content                      = <<-EOT
+            FROM node:22-alpine
+            
+            WORKDIR /app
+            COPY ./app /app
+            
+            RUN npm ci
+            
+            CMD ["npm", "run", "start"]
+        EOT
+      [32m+[0m[0m file                         = "app/Dockerfile"
+      [32m+[0m[0m id                           = (known after apply)
+      [32m+[0m[0m overwrite_on_create          = true
+      [32m+[0m[0m ref                          = (known after apply)
+      [32m+[0m[0m repository                   = "ccc-event-tracker"
+      [32m+[0m[0m sha                          = (known after apply)
+    }
+
+[1m  # module.nodejs["ccc-event-tracker"].github_repository_file.main[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_file" "main" {
+      [32m+[0m[0m autocreate_branch_source_sha = (known after apply)
+      [32m+[0m[0m commit_message               = (known after apply)
+      [32m+[0m[0m commit_sha                   = (known after apply)
+      [32m+[0m[0m content                      = <<-EOT
+            console.log('Hello, World!');
+        EOT
+      [32m+[0m[0m file                         = "app/main.js"
+      [32m+[0m[0m id                           = (known after apply)
+      [32m+[0m[0m overwrite_on_create          = true
+      [32m+[0m[0m ref                          = (known after apply)
+      [32m+[0m[0m repository                   = "ccc-event-tracker"
+      [32m+[0m[0m sha                          = (known after apply)
+    }
+
+[1m  # module.nodejs["ccc-event-tracker"].github_repository_file.package[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_file" "package" {
+      [32m+[0m[0m autocreate_branch_source_sha = (known after apply)
+      [32m+[0m[0m commit_message               = (known after apply)
+      [32m+[0m[0m commit_sha                   = (known after apply)
+      [32m+[0m[0m content                      = jsonencode(
+            {
+              [32m+[0m[0m name    = "ccc-event-tracker"
+              [32m+[0m[0m scripts = {
+                  [32m+[0m[0m start = "node main.js"
+                }
+            }
+        )
+      [32m+[0m[0m file                         = "app/package.json"
+      [32m+[0m[0m id                           = (known after apply)
+      [32m+[0m[0m overwrite_on_create          = true
+      [32m+[0m[0m ref                          = (known after apply)
+      [32m+[0m[0m repository                   = "ccc-event-tracker"
+      [32m+[0m[0m sha                          = (known after apply)
+    }
+
+[1m  # module.nodejs["ccc-event-tracker"].github_repository_file.package_lock[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_file" "package_lock" {
+      [32m+[0m[0m autocreate_branch_source_sha = (known after apply)
+      [32m+[0m[0m commit_message               = (known after apply)
+      [32m+[0m[0m commit_sha                   = (known after apply)
+      [32m+[0m[0m content                      = jsonencode(
+            {
+              [32m+[0m[0m lockfileVersion = 3
+              [32m+[0m[0m name            = "ccc-event-tracker"
+              [32m+[0m[0m packages        = {
+                  [32m+[0m[0m "" = {
+                      [32m+[0m[0m name = "ccc-event-tracker"
+                    }
+                }
+              [32m+[0m[0m requires        = true
+            }
+        )
+      [32m+[0m[0m file                         = "app/package-lock.json"
+      [32m+[0m[0m id                           = (known after apply)
+      [32m+[0m[0m overwrite_on_create          = true
+      [32m+[0m[0m ref                          = (known after apply)
+      [32m+[0m[0m repository                   = "ccc-event-tracker"
+      [32m+[0m[0m sha                          = (known after apply)
+    }
+
+[1m  # module.nodejs["fah-break"].github_repository_file.dockerfile[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_file" "dockerfile" {
+      [32m+[0m[0m autocreate_branch_source_sha = (known after apply)
+      [32m+[0m[0m commit_message               = (known after apply)
+      [32m+[0m[0m commit_sha                   = (known after apply)
+      [32m+[0m[0m content                      = <<-EOT
+            FROM node:22-alpine
+            
+            WORKDIR /app
+            COPY ./app /app
+            
+            RUN npm ci
+            
+            CMD ["npm", "run", "start"]
+        EOT
+      [32m+[0m[0m file                         = "app/Dockerfile"
+      [32m+[0m[0m id                           = (known after apply)
+      [32m+[0m[0m overwrite_on_create          = true
+      [32m+[0m[0m ref                          = (known after apply)
+      [32m+[0m[0m repository                   = "fah-break"
+      [32m+[0m[0m sha                          = (known after apply)
+    }
+
+[1m  # module.nodejs["fah-break"].github_repository_file.main[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_file" "main" {
+      [32m+[0m[0m autocreate_branch_source_sha = (known after apply)
+      [32m+[0m[0m commit_message               = (known after apply)
+      [32m+[0m[0m commit_sha                   = (known after apply)
+      [32m+[0m[0m content                      = <<-EOT
+            console.log('Hello, World!');
+        EOT
+      [32m+[0m[0m file                         = "app/main.js"
+      [32m+[0m[0m id                           = (known after apply)
+      [32m+[0m[0m overwrite_on_create          = true
+      [32m+[0m[0m ref                          = (known after apply)
+      [32m+[0m[0m repository                   = "fah-break"
+      [32m+[0m[0m sha                          = (known after apply)
+    }
+
+[1m  # module.nodejs["fah-break"].github_repository_file.package[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_file" "package" {
+      [32m+[0m[0m autocreate_branch_source_sha = (known after apply)
+      [32m+[0m[0m commit_message               = (known after apply)
+      [32m+[0m[0m commit_sha                   = (known after apply)
+      [32m+[0m[0m content                      = jsonencode(
+            {
+              [32m+[0m[0m name    = "fah-break"
+              [32m+[0m[0m scripts = {
+                  [32m+[0m[0m start = "node main.js"
+                }
+            }
+        )
+      [32m+[0m[0m file                         = "app/package.json"
+      [32m+[0m[0m id                           = (known after apply)
+      [32m+[0m[0m overwrite_on_create          = true
+      [32m+[0m[0m ref                          = (known after apply)
+      [32m+[0m[0m repository                   = "fah-break"
+      [32m+[0m[0m sha                          = (known after apply)
+    }
+
+[1m  # module.nodejs["fah-break"].github_repository_file.package_lock[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_file" "package_lock" {
+      [32m+[0m[0m autocreate_branch_source_sha = (known after apply)
+      [32m+[0m[0m commit_message               = (known after apply)
+      [32m+[0m[0m commit_sha                   = (known after apply)
+      [32m+[0m[0m content                      = jsonencode(
+            {
+              [32m+[0m[0m lockfileVersion = 3
+              [32m+[0m[0m name            = "fah-break"
+              [32m+[0m[0m packages        = {
+                  [32m+[0m[0m "" = {
+                      [32m+[0m[0m name = "fah-break"
+                    }
+                }
+              [32m+[0m[0m requires        = true
+            }
+        )
+      [32m+[0m[0m file                         = "app/package-lock.json"
+      [32m+[0m[0m id                           = (known after apply)
+      [32m+[0m[0m overwrite_on_create          = true
+      [32m+[0m[0m ref                          = (known after apply)
+      [32m+[0m[0m repository                   = "fah-break"
+      [32m+[0m[0m sha                          = (known after apply)
+    }
+
+[1m  # module.subdomain["api.uptime"].github_repository_topics.repos[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_topics" "repos" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m repository = "api.uptime"
+      [32m+[0m[0m topics     = [
+          [32m+[0m[0m "domain",
+        ]
+    }
+
+[1m  # module.subdomain["homeassistant"].github_repository_topics.repos[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_topics" "repos" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m repository = "homeassistant"
+      [32m+[0m[0m topics     = [
+          [32m+[0m[0m "domain",
+        ]
+    }
+
+[1m  # module.subdomain["sso"].github_repository_topics.repos[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_topics" "repos" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m repository = "sso"
+      [32m+[0m[0m topics     = [
+          [32m+[0m[0m "domain",
+        ]
+    }
+
+[1m  # module.subdomain["ttrss"].github_repository_topics.repos[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_topics" "repos" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m repository = "ttrss"
+      [32m+[0m[0m topics     = [
+          [32m+[0m[0m "domain",
+        ]
+    }
+
+[1m  # module.subdomain["uptime"].github_repository_topics.repos[0m will be created
+[0m  [32m+[0m[0m resource "github_repository_topics" "repos" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m repository = "uptime"
+      [32m+[0m[0m topics     = [
+          [32m+[0m[0m "domain",
+        ]
+    }
+
+[1mPlan:[0m 46 to add, 0 to change, 6 to destroy.
+[0m[90m
+─────────────────────────────────────────────────────────────────────────────[0m
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.
