@@ -34,7 +34,7 @@ locals {
     "tfstate",
     "resources",
     "ccc-event-tracker",
-    "fahbreak"
+    "fah-break"
   ]
   repositories = merge(
     { for r in local.repos : r => { tags = [] } },
