@@ -13,7 +13,7 @@ resource "github_repository_topics" "repos" {
 }
 
 resource "github_repository_file" "infrastructure-subdomain-tf" {
-  repository          = var.repository_reference
-  file                = "infrastructure/subdomain.tf"
-  content             = replace(file("${path.module}/infrastructure/subdomain.tf"), "$REPOSITORY", var.repository_reference)
+  repository = var.repository_reference
+  file       = "infrastructure/subdomain.tf"
+  content    = replace(file("${path.module}/infrastructure/subdomain.tf"), "$REPOSITORY", var.repository_reference)
 }

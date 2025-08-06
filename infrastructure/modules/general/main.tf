@@ -25,9 +25,9 @@ resource "github_repository" "repos" {
 }
 
 resource "github_repository_file" "workflow_deploy" {
-  repository = var.repository_reference
-  file       = ".github/workflows/deploy.yml"
-  content    = file("${path.module}/src/.github/workflows/deploy.yml")
+  repository          = var.repository_reference
+  file                = ".github/workflows/deploy.yml"
+  content             = file("${path.module}/src/.github/workflows/deploy.yml")
   overwrite_on_create = true
 }
 
@@ -41,13 +41,13 @@ resource "github_repository_environment" "production" {
 }
 
 resource "github_repository_file" "infrastructure-main-tf" {
-  repository          = var.repository_reference
-  file                = "infrastructure/main.tf"
-  content             = replace(file("${path.module}/infrastructure/main.tf"), "$REPOSITORY", var.repository_reference)
+  repository = var.repository_reference
+  file       = "infrastructure/main.tf"
+  content    = replace(file("${path.module}/infrastructure/main.tf"), "$REPOSITORY", var.repository_reference)
 }
 
 resource "github_repository_file" "service-main-tf" {
-  repository          = var.repository_reference
-  file                = "service/main.tf"
-  content             = replace(file("${path.module}/service/main.tf"), "$REPOSITORY", var.repository_reference)
+  repository = var.repository_reference
+  file       = "service/main.tf"
+  content    = replace(file("${path.module}/service/main.tf"), "$REPOSITORY", var.repository_reference)
 }
