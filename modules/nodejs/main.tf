@@ -1,12 +1,3 @@
-terraform {
-  required_providers {
-    github = {
-      source  = "integrations/github"
-      version = "~> 6.6.0"
-    }
-  }
-}
-
 resource "github_repository_file" "dockerfile" {
   repository          = var.repository_reference
   file                = "app/Dockerfile"
@@ -16,6 +7,7 @@ resource "github_repository_file" "dockerfile" {
     ignore_changes = [content]
   }
 }
+
 resource "github_repository_file" "docker_compose" {
   repository          = var.repository_reference
   file                = "docker-compose.yml"
@@ -25,6 +17,7 @@ resource "github_repository_file" "docker_compose" {
     ignore_changes = [content]
   }
 }
+
 resource "github_repository_file" "package" {
   repository          = var.repository_reference
   file                = "app/package.json"
@@ -34,6 +27,7 @@ resource "github_repository_file" "package" {
     ignore_changes = [content]
   }
 }
+
 resource "github_repository_file" "package_lock" {
   repository          = var.repository_reference
   file                = "app/package-lock.json"
