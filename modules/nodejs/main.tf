@@ -19,7 +19,7 @@ resource "github_repository_file" "dockerfile" {
 resource "github_repository_file" "docker_compose" {
   repository          = var.repository_reference
   file                = "docker-compose.yml"
-  content             = file("${path.module}/src/docker-compose.yml")
+  content             = replace(file("${path.module}/src/docker-compose.yml"), "$REPOSITORY", var.repository_reference)
   overwrite_on_create = false
   lifecycle {
     ignore_changes = [content]
