@@ -9,12 +9,6 @@ terraform {
   }
 }
 
-variable "GITHUB_PAT" {
-  description = "GitHub Personal Access Token"
-  type        = string
-  sensitive   = true
-}
-
 locals {
   generic = toset([
     ".github",

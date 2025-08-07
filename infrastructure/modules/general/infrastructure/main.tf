@@ -25,6 +25,12 @@ provider "keycloak" {
   url = "https://sso.by.vincent.mahn.ke"
 }
 
+variable "GITHUB_PAT" {
+  description = "GitHub Personal Access Token"
+  type        = string
+  sensitive   = true
+}
+
 provider "github" {
   owner = "mahn-ke"
   token = var.GITHUB_PAT
