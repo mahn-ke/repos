@@ -44,6 +44,7 @@ resource "github_repository_file" "infrastructure-main-tf" {
   repository          = var.repository_reference
   file                = "infrastructure/main.tf"
   content             = replace(file("${path.module}/infrastructure/main.tf"), "$REPOSITORY", var.repository_reference)
+  commit_message      = "Managed by Terraform${strcontains(var.repository_reference, "repos") ? " [no ci]" : ""}"
   overwrite_on_create = true
 }
 
@@ -51,5 +52,6 @@ resource "github_repository_file" "service-main-tf" {
   repository          = var.repository_reference
   file                = "service/main.tf"
   content             = replace(file("${path.module}/service/main.tf"), "$REPOSITORY", var.repository_reference)
+  commit_message      = "Managed by Terraform${strcontains(var.repository_reference, "repos") ? " [no ci]" : ""}"
   overwrite_on_create = true
 }
