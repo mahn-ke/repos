@@ -7,6 +7,11 @@ terraform {
   }
 }
 
+resource "github_repository_topics" "repos" {
+  repository = var.repository_reference
+  topics     = ["nodejs"]
+}
+
 resource "github_repository_file" "dockerfile" {
   repository          = var.repository_reference
   file                = "app/Dockerfile"
