@@ -1,14 +1,3 @@
-terraform {
-  backend "pg" {
-  }
-  required_providers {
-    github = {
-      source  = "integrations/github"
-      version = "~> 6.6.0"
-    }
-  }
-}
-
 locals {
   generic = toset([
     ".github",
