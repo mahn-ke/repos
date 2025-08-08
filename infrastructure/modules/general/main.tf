@@ -24,15 +24,8 @@ resource "github_repository" "repos" {
   vulnerability_alerts        = true
 }
 
-resource "github_repository_file" "workflow_deploy" {
-  repository          = var.repository_reference
-  file                = ".github/workflows/deploy.yml"
-  content             = file("${path.module}/src/.github/workflows/deploy.yml")
-  overwrite_on_create = true
-}
-
 resource "github_repository_environment" "production" {
-  repository          = var.repository_reference
+  repository          = github_repository.repos.name
   environment         = "production"
   prevent_self_review = false
   reviewers {
@@ -40,18 +33,25 @@ resource "github_repository_environment" "production" {
   }
 }
 
+resource "github_repository_file" "workflow_deploy" {
+  repository          = github_repository.repos.name
+  file                = ".github/workflows/deploy.yml"
+  content             = file("${path.module}/src/.github/workflows/deploy.yml")
+  overwrite_on_create = true
+}
+
 resource "github_repository_file" "infrastructure-main-tf" {
-  repository          = var.repository_reference
+  repository          = github_repository.repos.name
   file                = "infrastructure/main.tf"
-  content             = replace(file("${path.module}/infrastructure/main.tf"), "$REPOSITORY", var.repository_reference)
-  commit_message      = "Managed by Terraform${strcontains(var.repository_reference, "repos") ? " [no ci]" : ""}"
+  content             = replace(file("${path.module}/infrastructure/main.tf"), "$REPOSITORY", github_repository.repos.name)
+  commit_message      = "Managed by Terraform${strcontains(github_repository.repos.name, "repos") ? " [no ci]" : ""}"
   overwrite_on_create = true
 }
 
 resource "github_repository_file" "service-main-tf" {
-  repository          = var.repository_reference
+  repository          = github_repository.repos.name
   file                = "service/main.tf"
-  content             = replace(file("${path.module}/service/main.tf"), "$REPOSITORY", var.repository_reference)
-  commit_message      = "Managed by Terraform${strcontains(var.repository_reference, "repos") ? " [no ci]" : ""}"
+  content             = replace(file("${path.module}/service/main.tf"), "$REPOSITORY", github_repository.repos.name)
+  commit_message      = "Managed by Terraform${strcontains(github_repository.repos.name, "repos") ? " [no ci]" : ""}"
   overwrite_on_create = true
 }
