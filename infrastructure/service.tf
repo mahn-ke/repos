@@ -3,7 +3,8 @@ locals {
     ".github",
     "repos",
     "tfstate",
-    "resources"
+    "resources",
+    "storage-management"
   ])
   subdomains = toset([
     for name in [
