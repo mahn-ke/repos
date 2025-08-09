@@ -37,6 +37,7 @@ resource "github_repository_file" "workflow_deploy" {
   repository          = github_repository.repos.name
   file                = ".github/workflows/deploy.yml"
   content             = file("${path.module}/src/.github/workflows/deploy.yml")
+  commit_message      = "Managed by Terraform${strcontains(github_repository.repos.name, "repos") ? " [no ci]" : ""}"
   overwrite_on_create = true
 }
 
@@ -44,6 +45,7 @@ resource "github_repository_file" "workflow_backup" {
   repository          = github_repository.repos.name
   file                = ".github/workflows/backup.yml"
   content             = file("${path.module}/src/.github/workflows/backup.yml")
+  commit_message      = "Managed by Terraform${strcontains(github_repository.repos.name, "repos") ? " [no ci]" : ""}"
   overwrite_on_create = true
 }
 
