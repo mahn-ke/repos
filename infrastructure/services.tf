@@ -12,7 +12,8 @@ locals {
       "api.uptime",
       "homeassistant",
       "uptime",
-      "sso"
+      "sso",
+      "cloud"
     ] : replace("${name}.by.vincent", ".", "-")
   ])
   nodejs = toset([
