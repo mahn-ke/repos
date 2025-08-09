@@ -40,6 +40,13 @@ resource "github_repository_file" "workflow_deploy" {
   overwrite_on_create = true
 }
 
+resource "github_repository_file" "workflow_backup" {
+  repository          = github_repository.repos.name
+  file                = ".github/workflows/backup.yml"
+  content             = file("${path.module}/src/.github/workflows/backup.yml")
+  overwrite_on_create = true
+}
+
 resource "github_repository_file" "infrastructure-main-tf" {
   repository          = github_repository.repos.name
   file                = "infrastructure/main.tf"
