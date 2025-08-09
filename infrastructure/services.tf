@@ -2,18 +2,18 @@ locals {
   generic = toset([
     ".github",
     "repos",
-    "tfstate",
     "resources",
     "storage-management"
   ])
   subdomains = toset([
     for name in [
+      "tfstate",
       "ttrss",
       "api.uptime",
       "homeassistant",
       "uptime",
       "sso",
-      "cloud"
+      "cloud",
     ] : replace("${name}.by.vincent", ".", "-")
   ])
   nodejs = toset([
