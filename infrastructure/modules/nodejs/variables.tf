@@ -1,5 +1,5 @@
-variable "repository_reference" {
-  description = "Repository reference"
+variable "repository_name" {
+  description = "Repository name"
   type        = string
 }
 

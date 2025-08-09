@@ -8,12 +8,12 @@ terraform {
 }
 
 resource "github_repository_topics" "repos" {
-  repository = var.repository_reference
+  repository = var.repository_name
   topics     = ["domain"]
 }
 
 resource "github_repository_file" "infrastructure-subdomain-tf" {
-  repository = var.repository_reference
+  repository = var.repository_name
   file       = "infrastructure/subdomain.tf"
-  content    = replace(file("${path.module}/infrastructure/subdomain.tf"), "$REPOSITORY", var.repository_reference)
+  content    = replace(file("${path.module}/infrastructure/subdomain.tf"), "$REPOSITORY", var.repository_name)
 }

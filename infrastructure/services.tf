@@ -45,8 +45,9 @@ module "subdomain" {
     github = github
   }
 
-  repository_reference = each.key
-  user_vimaster        = data.github_user.current.id
+  // use module reference, to implicitly wait for repository creation
+  repository_name = module.general[each.key].repository_name
+  user_vimaster   = data.github_user.current.id
 }
 
 module "nodejs" {
@@ -56,8 +57,9 @@ module "nodejs" {
     github = github
   }
 
-  repository_reference = each.key
-  user_vimaster        = data.github_user.current.id
+  // use module reference, to implicitly wait for repository creation
+  repository_name = module.general[each.key].repository_name
+  user_vimaster   = data.github_user.current.id
 }
 
 

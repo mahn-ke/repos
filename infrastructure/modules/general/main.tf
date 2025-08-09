@@ -24,6 +24,10 @@ resource "github_repository" "repos" {
   vulnerability_alerts        = true
 }
 
+output "repository_name" {
+  value = github_repository.repos.name
+}
+
 resource "github_repository_environment" "production" {
   repository          = github_repository.repos.name
   environment         = "production"
