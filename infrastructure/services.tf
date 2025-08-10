@@ -18,7 +18,8 @@ locals {
   ])
   nodejs = toset([
     "ccc-event-tracker",
-    "fah-break"
+    "fah-break",
+    "backup-trigger"
   ])
   all_repositories = setunion(local.generic, local.subdomains, local.nodejs)
 }
