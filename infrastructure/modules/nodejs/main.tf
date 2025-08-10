@@ -55,7 +55,7 @@ resource "github_repository_file" "package_lock" {
 resource "github_repository_file" "main" {
   repository          = var.repository_name
   file                = "app/main.js"
-  content             = "console.log('Hello, World!');\n"
+  content             = replace(file("${path.module}/src/main.js"), "$REPOSITORY", var.repository_name)
   overwrite_on_create = false
   lifecycle {
     ignore_changes = [content]
