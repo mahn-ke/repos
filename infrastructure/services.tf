@@ -14,6 +14,7 @@ locals {
       "uptime",
       "sso",
       "cloud",
+      "matrix",
     ] : replace("${name}.by.vincent", ".", "-")
   ])
   nodejs = toset([
