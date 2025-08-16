@@ -61,3 +61,14 @@ resource "github_repository_file" "main" {
     ignore_changes = [content]
   }
 }
+
+
+resource "github_repository_file" "gitignore" {
+  repository          = var.repository_name
+  file                = "app/.gitignore"
+  content             = file("${path.module}/src/.gitignore")
+  overwrite_on_create = false
+  lifecycle {
+    ignore_changes = [content]
+  }
+}
