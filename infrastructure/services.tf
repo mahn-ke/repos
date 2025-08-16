@@ -1,31 +1,34 @@
 locals {
-  generic = toset([
-    ".github",
-    "repos",
-    "resources",
-    "storage-management"
-  ])
-  subdomains = toset([
+  generic = {
+    ".github"            = ".github"
+    "repos"              = "repos"
+    "resources"          = "resources"
+    "storage-management" = "storage-management"
+  }
+  subdomains = {
     for name in [
       "tfstate",
-      "ttrss",
       "api.uptime",
       "homeassistant",
       "uptime",
-      "sso",
       "cloud",
       "matrix",
       "irc",
-      "containers"
-    ] : replace("${name}.by.vincent", ".", "-")
-  ])
-  nodejs = toset([
-    "ccc-event-tracker",
-    "fah-break",
-    "backup-trigger",
-    "fitx-fetcher"
-  ])
-  all_repositories = setunion(local.generic, local.subdomains, local.nodejs)
+      "sso"
+    ] : replace("${name}.by.vincent", ".", "-") => replace("${name}.by.vincent", ".", "-")
+  }
+  oauth_clients = {
+    for key, value in {
+      "ttrss" = "Tiny Tiny RSS"
+      "containers" = "Portainer"
+    } : "${replace(key, ".", "-")}-by-vincent" => value
+  }
+  nodejs = {
+    "ccc-event-tracker" = "ccc-event-tracker"
+    "fah-break"         = "fah-break"
+    "backup-trigger"    = "backup-trigger"
+    "fitx-fetcher"      = "fitx-fetcher"
+  }
 }
 
 data "github_user" "current" {
@@ -33,7 +36,7 @@ data "github_user" "current" {
 }
 
 module "general" {
-  for_each = local.all_repositories
+  for_each = merge(local.generic, local.subdomains, local.oauth_clients, local.nodejs)
   source   = "./modules/general"
   providers = {
     github = github
@@ -44,14 +47,27 @@ module "general" {
 }
 
 module "subdomain" {
-  for_each = local.subdomains
+  for_each = merge(local.subdomains, local.oauth_clients)
   source   = "./modules/subdomain"
   providers = {
     github = github
   }
 
-  // use module reference, to implicitly wait for repository creation
   repository_name = module.general[each.key].repository_name
+  user_vimaster   = data.github_user.current.id
+}
+
+module "oauth_client" {
+  for_each = local.oauth_clients
+  source   = "./modules/oauth_client"
+  providers = {
+    github = github
+    keycloak = keycloak
+  }
+
+  keycloak_realm_id   = data.keycloak_realm.sso_by_vincent_mahn_ke.id
+  repository_name = module.general[each.key].repository_name
+  display_name    = each.value
   user_vimaster   = data.github_user.current.id
 }
 
@@ -62,15 +78,6 @@ module "nodejs" {
     github = github
   }
 
-  // use module reference, to implicitly wait for repository creation
   repository_name = module.general[each.key].repository_name
   user_vimaster   = data.github_user.current.id
 }
-
-
-
-
-
-
-
-
