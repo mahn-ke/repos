@@ -19,7 +19,7 @@ locals {
   }
   oauth_clients = {
     for key, value in {
-      "ttrss" = "Tiny Tiny RSS"
+      "ttrss"      = "Tiny Tiny RSS"
       "containers" = "Portainer"
     } : "${replace(key, ".", "-")}-by-vincent" => value
   }
@@ -61,14 +61,14 @@ module "oauth_client" {
   for_each = local.oauth_clients
   source   = "./modules/oauth_client"
   providers = {
-    github = github
+    github   = github
     keycloak = keycloak
   }
 
-  keycloak_realm_id   = data.keycloak_realm.sso_by_vincent_mahn_ke.id
-  repository_name = module.general[each.key].repository_name
-  display_name    = each.value
-  user_vimaster   = data.github_user.current.id
+  keycloak_realm_id = data.keycloak_realm.sso_by_vincent_mahn_ke.id
+  repository_name   = module.general[each.key].repository_name
+  display_name      = each.value
+  user_vimaster     = data.github_user.current.id
 }
 
 module "nodejs" {
