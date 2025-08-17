@@ -39,16 +39,6 @@ resource "github_repository_ruleset" "pull_requests_on_default" {
 
   rules {
     required_linear_history = true
-    pull_request {
-      required_approving_review_count   = 0
-      dismiss_stale_reviews_on_push     = true
-      require_code_owner_review         = false
-      require_last_push_approval        = false
-      required_review_thread_resolution = true
-      # unsupported as of Aug 17th 2025:
-      # automatic_copilot_code_review_enabled = false
-      # allowed_merge_methods                = ["merge", "rebase"]
-    }
 
     required_status_checks {
       strict_required_status_checks_policy = true
