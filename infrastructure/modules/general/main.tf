@@ -19,6 +19,17 @@ resource "github_repository_ruleset" "pull_requests_on_default" {
   target      = "branch"
   enforcement = "active"
 
+  bypass_actors {
+    actor_id    = 0
+    actor_type  = "OrganizationAdmin"
+    bypass_mode = "always"
+  }
+  bypass_actors {
+    actor_id    = 5
+    actor_type  = "RepositoryRole"
+    bypass_mode = "always"
+  }
+
   conditions {
     ref_name {
       include = ["~DEFAULT_BRANCH"]
