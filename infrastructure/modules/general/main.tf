@@ -12,6 +12,8 @@ resource "github_repository" "repos" {
   visibility                  = "public"
   auto_init                   = false
   license_template            = "gpl-3.0"
+  allow_auto_merge            = true
+  delete_branch_on_merge      = true
   allow_merge_commit          = false
   allow_rebase_merge          = true
   allow_squash_merge          = true
