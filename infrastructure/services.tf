@@ -14,7 +14,8 @@ locals {
       "cloud",
       "matrix",
       "irc",
-      "sso"
+      "sso",
+      "rustdesk"
     ] : replace("${name}.by.vincent", ".", "-") => replace("${name}.by.vincent", ".", "-")
   }
   oauth_clients = {
