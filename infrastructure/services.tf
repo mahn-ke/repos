@@ -16,7 +16,8 @@ locals {
       "irc",
       "sso",
       "rustdesk",
-      "notifications"
+      "notifications",
+      "logging"
     ] : replace("${name}.by.vincent", ".", "-") => replace("${name}.by.vincent", ".", "-")
   }
   oauth_clients = {
