@@ -28,11 +28,12 @@ locals {
     } : "${replace(key, ".", "-")}-by-vincent" => value
   }
   nodejs = {
-    "ccc-event-tracker"    = "ccc-event-tracker"
-    "fah-break"            = "fah-break"
-    "backup-trigger"       = "backup-trigger"
-    "fitx-fetcher"         = "fitx-fetcher"
-    "myfitnesspal-fetcher" = "myfitnesspal-fetcher"
+    "ccc-event-tracker"       = "ccc-event-tracker"
+    "fah-break"               = "fah-break"
+    "backup-trigger"          = "backup-trigger"
+    "fitx-fetcher"            = "fitx-fetcher"
+    "myfitnesspal-fetcher"    = "myfitnesspal-fetcher"
+    "gamereleases-by-vincent" = "gamereleases-by-vincent"
   }
 }
 
