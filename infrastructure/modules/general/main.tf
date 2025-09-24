@@ -121,7 +121,7 @@ resource "github_repository_file" "renovate" {
   file                = "renovate.json"
   content             = file("${path.module}/src/renovate.json5")
   commit_message      = "Managed by Terraform${strcontains(github_repository.repos.name, "repos") ? " [no ci]" : ""}"
-  overwrite_on_create = true
+  overwrite_on_create = false
 }
 
 resource "github_repository_file" "workflow_automerge" {
