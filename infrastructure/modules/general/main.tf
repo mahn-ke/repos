@@ -119,7 +119,7 @@ EOT
 resource "github_repository_file" "renovate" {
   repository          = github_repository.repos.name
   file                = "renovate.json"
-  content             = "${replace(var.auto_generated_header, "#", "/")}\n${file("${path.module}/src/renovate.json5")}"
+  content             = file("${path.module}/src/renovate.json5")
   commit_message      = "Managed by Terraform${strcontains(github_repository.repos.name, "repos") ? " [no ci]" : ""}"
   overwrite_on_create = true
 }
