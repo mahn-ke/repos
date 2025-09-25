@@ -18,7 +18,8 @@ locals {
       "rustdesk",
       "notifications",
       "logging",
-      "gamereleases"
+      "gamereleases",
+      "paperless"
     ] : replace("${name}.by.vincent", ".", "-") => replace("${name}.by.vincent", ".", "-")
   }
   oauth_clients = {
