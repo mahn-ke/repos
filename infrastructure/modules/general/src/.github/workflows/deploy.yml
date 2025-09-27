@@ -3,6 +3,11 @@ name: Deploy service, generate certificates, and update NGINX configuration
 on:
   push:
     branches: [ "main" ]
+    paths-ignore:
+      - '.github/**'
+      - '**/.gitignore'
+      - 'README.md'
+      - 'renovate.json'
   pull_request:
   workflow_dispatch:
 
