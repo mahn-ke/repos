@@ -26,6 +26,7 @@ locals {
     for key, value in {
       "ttrss"      = "Tiny Tiny RSS"
       "containers" = "Portainer"
+      "paperless"  = "Paperless"
     } : "${replace(key, ".", "-")}-by-vincent" => value
   }
   nodejs = {
