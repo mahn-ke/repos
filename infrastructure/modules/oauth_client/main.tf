@@ -38,73 +38,73 @@ resource "keycloak_openid_client" "openid_client" {
 
 
 resource "github_actions_secret" "oauth_name" {
-  repository       = var.repository_name
-  secret_name      = "OAUTH_NAME"
-  plaintext_value  = "Keycloak"
+  repository      = var.repository_name
+  secret_name     = "OAUTH_NAME"
+  plaintext_value = "Keycloak"
 }
 
 resource "github_codespaces_secret" "oauth_name" {
-  repository       = var.repository_name
-  secret_name      = "OAUTH_NAME"
-  plaintext_value  = "Keycloak"
+  repository      = var.repository_name
+  secret_name     = "OAUTH_NAME"
+  plaintext_value = "Keycloak"
 }
 
 resource "github_dependabot_secret" "oauth_name" {
-  repository       = var.repository_name
-  secret_name      = "OAUTH_NAME"
-  plaintext_value  = "Keycloak"
+  repository      = var.repository_name
+  secret_name     = "OAUTH_NAME"
+  plaintext_value = "Keycloak"
 }
 
 resource "github_actions_secret" "oauth_url" {
-  repository       = var.repository_name
-  secret_name      = "OAUTH_URL"
-  plaintext_value  = "https://sso.by.vincent.mahn.ke/realms/sso.by.vincent.mahn.ke"
+  repository      = var.repository_name
+  secret_name     = "OAUTH_URL"
+  plaintext_value = "https://sso.by.vincent.mahn.ke/realms/sso.by.vincent.mahn.ke"
 }
 
 resource "github_codespaces_secret" "oauth_url" {
-  repository       = var.repository_name
-  secret_name      = "OAUTH_URL"
-  plaintext_value  = "https://sso.by.vincent.mahn.ke/realms/sso.by.vincent.mahn.ke"
+  repository      = var.repository_name
+  secret_name     = "OAUTH_URL"
+  plaintext_value = "https://sso.by.vincent.mahn.ke/realms/sso.by.vincent.mahn.ke"
 }
 
 resource "github_dependabot_secret" "oauth_url" {
-  repository       = var.repository_name
-  secret_name      = "OAUTH_URL"
-  plaintext_value  = "https://sso.by.vincent.mahn.ke/realms/sso.by.vincent.mahn.ke"
+  repository      = var.repository_name
+  secret_name     = "OAUTH_URL"
+  plaintext_value = "https://sso.by.vincent.mahn.ke/realms/sso.by.vincent.mahn.ke"
 }
 
 resource "github_actions_secret" "oauth_client_id" {
-  repository       = var.repository_name
-  secret_name      = "OAUTH_CLIENT_ID"
-  plaintext_value  = keycloak_openid_client.openid_client.client_id
+  repository      = var.repository_name
+  secret_name     = "OAUTH_CLIENT_ID"
+  plaintext_value = keycloak_openid_client.openid_client.client_id
 }
 
 resource "github_codespaces_secret" "oauth_client_id" {
-  repository       = var.repository_name
-  secret_name      = "OAUTH_CLIENT_ID"
-  plaintext_value  = keycloak_openid_client.openid_client.client_id
+  repository      = var.repository_name
+  secret_name     = "OAUTH_CLIENT_ID"
+  plaintext_value = keycloak_openid_client.openid_client.client_id
 }
 
 resource "github_dependabot_secret" "oauth_client_id" {
-  repository       = var.repository_name
-  secret_name      = "OAUTH_CLIENT_ID"
-  plaintext_value  = keycloak_openid_client.openid_client.client_id
+  repository      = var.repository_name
+  secret_name     = "OAUTH_CLIENT_ID"
+  plaintext_value = keycloak_openid_client.openid_client.client_id
 }
 
 resource "github_actions_secret" "oauth_client_secret" {
-  repository       = var.repository_name
-  secret_name      = "OAUTH_CLIENT_SECRET"
-  plaintext_value  = keycloak_openid_client.openid_client.client_secret
+  repository      = var.repository_name
+  secret_name     = "OAUTH_CLIENT_SECRET"
+  plaintext_value = keycloak_openid_client.openid_client.client_secret
 }
 
 resource "github_codespaces_secret" "oauth_client_secret" {
-  repository       = var.repository_name
-  secret_name      = "OAUTH_CLIENT_SECRET"
-  plaintext_value  = keycloak_openid_client.openid_client.client_secret
+  repository      = var.repository_name
+  secret_name     = "OAUTH_CLIENT_SECRET"
+  plaintext_value = keycloak_openid_client.openid_client.client_secret
 }
 
 resource "github_dependabot_secret" "oauth_client_secret" {
-  repository       = var.repository_name
-  secret_name      = "OAUTH_CLIENT_SECRET"
-  plaintext_value  = keycloak_openid_client.openid_client.client_secret
+  repository      = var.repository_name
+  secret_name     = "OAUTH_CLIENT_SECRET"
+  plaintext_value = keycloak_openid_client.openid_client.client_secret
 }
