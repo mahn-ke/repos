@@ -19,7 +19,8 @@ locals {
       "notifications",
       "logging",
       "gamereleases",
-      "paperless"
+      "paperless",
+      "photos"
     ] : replace("${name}.by.vincent", ".", "-") => replace("${name}.by.vincent", ".", "-")
   }
   oauth_clients = {
