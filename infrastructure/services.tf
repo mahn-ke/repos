@@ -28,6 +28,7 @@ locals {
       "ttrss"      = "Tiny Tiny RSS"
       "containers" = "Portainer"
       "paperless"  = "Paperless"
+      "photos"     = "Immich"
     } : "${replace(key, ".", "-")}-by-vincent" => value
   }
   nodejs = {
