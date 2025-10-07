@@ -20,7 +20,8 @@ locals {
       "logging",
       "gamereleases",
       "paperless",
-      "photos"
+      "photos",
+      "availability"
     ] : replace("${name}.by.vincent", ".", "-") => replace("${name}.by.vincent", ".", "-")
   }
   oauth_clients = {
@@ -38,6 +39,7 @@ locals {
     "fitx-fetcher"            = "fitx-fetcher"
     "myfitnesspal-fetcher"    = "myfitnesspal-fetcher"
     "gamereleases-by-vincent" = "gamereleases-by-vincent"
+    "availability-by-vincent" = "availability-by-vincent"
   }
 }
 
