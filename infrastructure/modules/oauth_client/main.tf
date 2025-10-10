@@ -26,9 +26,10 @@ resource "keycloak_openid_client" "openid_client" {
   enabled = true
 
   access_type = "CONFIDENTIAL"
-  valid_redirect_uris = [
-    "https://${local.subdomain_label}.by.vincent.mahn.ke/*"
-  ]
+  valid_redirect_uris = concat(
+    ["https://${local.subdomain_label}.by.vincent.mahn.ke/*"],
+    var.valid_redirect_urls
+  )
   always_display_in_console = true
   root_url                  = "https://${local.subdomain_label}.by.vincent.mahn.ke"
   base_url                  = "https://${local.subdomain_label}.by.vincent.mahn.ke"
