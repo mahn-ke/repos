@@ -40,6 +40,7 @@ locals {
     "backup-trigger"          = 3004
     "fitx-fetcher"            = 3005
     "myfitnesspal-fetcher"    = 3006
+    "nodejstest"              = 3007
   }
 }
 
@@ -55,7 +56,6 @@ module "general" {
   }
 
   repository_reference = each.key
-  port                 = each.value
   user_vimaster        = data.github_user.current.id
 }
 
@@ -92,5 +92,6 @@ module "nodejs" {
   }
 
   repository_name = module.general[each.key].repository_name
+  port            = each.value
   user_vimaster   = data.github_user.current.id
 }
