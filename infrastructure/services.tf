@@ -33,13 +33,13 @@ locals {
     } : "${replace(key, ".", "-")}-by-vincent" => value
   }
   nodejs = {
-    "ccc-event-tracker"       = "ccc-event-tracker"
-    "fah-break"               = "fah-break"
-    "backup-trigger"          = "backup-trigger"
-    "fitx-fetcher"            = "fitx-fetcher"
-    "myfitnesspal-fetcher"    = "myfitnesspal-fetcher"
-    "gamereleases-by-vincent" = "gamereleases-by-vincent"
-    "availability-by-vincent" = "availability-by-vincent"
+    "gamereleases-by-vincent" = 3000
+    "availability-by-vincent" = 3001
+    "ccc-event-tracker"       = 3002
+    "fah-break"               = 3003
+    "backup-trigger"          = 3004
+    "fitx-fetcher"            = 3005
+    "myfitnesspal-fetcher"    = 3006
   }
 }
 
@@ -55,6 +55,7 @@ module "general" {
   }
 
   repository_reference = each.key
+  port                 = each.value
   user_vimaster        = data.github_user.current.id
 }
 
