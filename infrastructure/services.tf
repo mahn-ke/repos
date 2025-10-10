@@ -26,10 +26,21 @@ locals {
   }
   oauth_clients = {
     for key, value in {
-      "ttrss"      = "Tiny Tiny RSS"
-      "containers" = "Portainer"
-      "paperless"  = "Paperless"
-      "photos"     = "Immich"
+      "ttrss"      = {
+          display_name = "Tiny Tiny RSS"
+      }
+      "containers" = {
+          display_name = "Portainer"
+      }
+      "paperless"  = {
+          display_name = "Paperless"
+      }
+      "photos"     = {
+          display_name = "Immich"
+          valid_redirect_urls = [
+              "app.immich:///oauth-callback"
+          ]
+      }
     } : "${replace(key, ".", "-")}-by-vincent" => value
   }
   nodejs = {
@@ -78,10 +89,11 @@ module "oauth_client" {
     keycloak = keycloak
   }
 
-  keycloak_realm_id = data.keycloak_realm.sso_by_vincent_mahn_ke.id
-  repository_name   = module.general[each.key].repository_name
-  display_name      = each.value
-  user_vimaster     = data.github_user.current.id
+  keycloak_realm_id   = data.keycloak_realm.sso_by_vincent_mahn_ke.id
+  repository_name     = module.general[each.key].repository_name
+  display_name        = each.value.display_name
+  valid_redirect_urls = each.value.valid_redirect_urls
+  user_vimaster       = data.github_user.current.id
 }
 
 module "nodejs" {
