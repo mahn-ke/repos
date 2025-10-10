@@ -8,6 +8,11 @@ variable "repository_name" {
   type        = string
 }
 
+variable "valid_redirect_urls" {
+  description = "Extra redirect URLs"
+  type        = list
+}
+
 variable "display_name" {
   description = "Display name"
   type        = string
