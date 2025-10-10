@@ -1,6 +1,16 @@
+#http
 version: "3.8"
 
 services:
   app:
     image: ghcr.io/mahn-ke/$REPOSITORY:latest
-    restart: unless-stopped
+    restart: on-failure:5
+    environment:
+      - PORT=$PORT
+    ports:
+      - "$PORT:3000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:$PORT/releases.ics"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
