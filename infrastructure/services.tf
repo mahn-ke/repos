@@ -92,7 +92,7 @@ module "oauth_client" {
   keycloak_realm_id   = data.keycloak_realm.sso_by_vincent_mahn_ke.id
   repository_name     = module.general[each.key].repository_name
   display_name        = each.value.display_name
-  valid_redirect_urls = each.value.valid_redirect_urls
+  valid_redirect_urls = lookup(each.value, "valid_redirect_urls", [])
   user_vimaster       = data.github_user.current.id
 }
 
