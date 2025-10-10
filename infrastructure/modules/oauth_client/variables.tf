@@ -10,7 +10,7 @@ variable "repository_name" {
 
 variable "valid_redirect_urls" {
   description = "Extra redirect URLs"
-  type        = list
+  type        = list(string)
 }
 
 variable "display_name" {

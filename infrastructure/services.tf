@@ -26,20 +26,20 @@ locals {
   }
   oauth_clients = {
     for key, value in {
-      "ttrss"      = {
-          display_name = "Tiny Tiny RSS"
+      "ttrss" = {
+        display_name = "Tiny Tiny RSS"
       }
       "containers" = {
-          display_name = "Portainer"
+        display_name = "Portainer"
       }
-      "paperless"  = {
-          display_name = "Paperless"
+      "paperless" = {
+        display_name = "Paperless"
       }
-      "photos"     = {
-          display_name = "Immich"
-          valid_redirect_urls = [
-              "app.immich:///oauth-callback"
-          ]
+      "photos" = {
+        display_name = "Immich"
+        valid_redirect_urls = [
+          "app.immich:///oauth-callback"
+        ]
       }
     } : "${replace(key, ".", "-")}-by-vincent" => value
   }
