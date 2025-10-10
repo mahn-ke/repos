@@ -51,7 +51,6 @@ locals {
     "backup-trigger"          = 3004
     "fitx-fetcher"            = 3005
     "myfitnesspal-fetcher"    = 3006
-    "nodejstest"              = 3007
   }
 }
 
