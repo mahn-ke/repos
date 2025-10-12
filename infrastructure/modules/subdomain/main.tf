@@ -13,10 +13,10 @@ resource "github_repository_topics" "repos" {
 }
 
 resource "github_repository_file" "readme" {
-  repository          = github_repository.repos.name
+  repository          = var.repository_name
   file                = "README.MD"
   content             = replace(replace(file("${path.module}/README.MD"), "$REPOSITORY", var.repository_name), "-by-vincent", "")
-  commit_message      = "Managed by Terraform${strcontains(github_repository.repos.name, "repos") ? " [no ci]" : ""}"
+  commit_message      = "Managed by Terraform${strcontains(var.repository_name, "repos") ? " [no ci]" : ""}"
   overwrite_on_create = false
 }
 
