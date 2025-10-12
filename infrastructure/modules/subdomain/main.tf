@@ -12,8 +12,16 @@ resource "github_repository_topics" "repos" {
   topics     = ["domain"]
 }
 
+resource "github_repository_file" "readme" {
+  repository          = github_repository.repos.name
+  file                = "README.MD"
+  content             = replace(replace(file("${path.module}/README.MD"), "$REPOSITORY", var.repository_name), "-by-vincent", "")
+  commit_message      = "Managed by Terraform${strcontains(github_repository.repos.name, "repos") ? " [no ci]" : ""}"
+  overwrite_on_create = false
+}
+
 resource "github_repository_file" "infrastructure-subdomain-tf" {
   repository = var.repository_name
   file       = "infrastructure/subdomain.tf"
-  content    = replace(file("${path.module}/infrastructure/subdomain.tf"), "$REPOSITORY", var.repository_name)
+  content    = file("${path.module}/infrastructure/subdomain.tf")
 }
