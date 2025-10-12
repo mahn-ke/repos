@@ -21,8 +21,7 @@ locals {
       "gamereleases",
       "paperless",
       "photos",
-      "availability",
-      "readmetest"
+      "availability"
     ] : replace("${name}.by.vincent", ".", "-") => replace("${name}.by.vincent", ".", "-")
   }
   oauth_clients = {
