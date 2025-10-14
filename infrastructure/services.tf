@@ -46,7 +46,6 @@ locals {
   nodejs = {
     "gamereleases-by-vincent" = 3000
     "availability-by-vincent" = 3001
-    "ccc-event-tracker"       = 3002
     "fah-break"               = 3003
     "backup-trigger"          = 3004
     "fitx-fetcher"            = 3005
