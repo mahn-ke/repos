@@ -84,6 +84,29 @@ provider "registry.terraform.io/keycloak/keycloak" {
   ]
 }
 
+provider "registry.terraform.io/lukasknuth/gotify" {
+  version     = "0.3.0"
+  constraints = "~> 0.3.0"
+  hashes = [
+    "h1:Ztg1iIZOErwKCLPw1eugPptmwRG3aVKcQQi+2hjMOSI=",
+    "zh:135a347e7b07d6c41cfb9412305981497e95fc11b76d1e5d5d92eab1a2d21266",
+    "zh:18bb602c105719aeb506b04654aade8a15f872b08db5fd026d0c824cf78fa5e4",
+    "zh:2cedefc6fc2ad527af9b6caedea77dc74decd1e927cf0d9969bdb3f39dd7d015",
+    "zh:3227d6e95a14a9cf2327495788710547e1b1b4be495993d5a1a67c57e68de33b",
+    "zh:4e826fa015926455d342e496b89a946290817bb23d4cdda5b1e0be7937e2f66f",
+    "zh:6975ffdddcacb6ebd811257a754091bdc82b4f5e0b1df086b7f9764fb8198866",
+    "zh:73e98f4fa91708e4cc5e4a0d46a4fc8660cbb43b2afe9e4437413bc0c411bc01",
+    "zh:86ca4238e3a3f2814f7ec0181f902aa24fb172f62eaf69c84f869f208b4149c3",
+    "zh:890df766e9b839623b1f0437355032a3c006226a6c200cd911e15ee1a9014e9f",
+    "zh:95a3e22c1b321c5b3e8b551a19a3166cbcb2eca152975e79fe7bbcd115ae17c3",
+    "zh:96ef8ad5df34455e9b7731b95696b46110bc2fab54f1b74aca04eaf8cd6c7ae1",
+    "zh:b06d1fab6ff30521d640c61271aaeb83e06f64842cfdca6f39e52e0a5b851653",
+    "zh:b656243bf7cf979638130e4b90afecbf14becd87781e568e1de83afe68039cfe",
+    "zh:c9ce24af6b6c884fbddd1c62da49d42a1325d65819e6efdb3aea1816f33031a2",
+    "zh:e866f2b724030060362cdb85ab89f1aab3d25b929472ebdb8802fc023ad30e94",
+  ]
+}
+
 provider "registry.terraform.io/vimaster/allinkl" {
   version     = "0.1.5"
   constraints = "0.1.5"
