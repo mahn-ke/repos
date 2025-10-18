@@ -8,7 +8,6 @@ locals {
   subdomains = {
     for name in [
       "tfstate",
-      "api.uptime",
       "homeassistant",
       "uptime",
       "cloud",
