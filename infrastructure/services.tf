@@ -21,7 +21,8 @@ locals {
       "photos",
       "availability",
       "umap",
-      "fitness"
+      "fitness",
+      "office"
     ] : replace("${name}.by.vincent", ".", "-") => replace("${name}.by.vincent", ".", "-")
   }
   oauth_clients = {
