@@ -20,7 +20,6 @@ locals {
       "paperless",
       "photos",
       "availability",
-      "umap",
       "fitness",
       "errors",
       "pretix"
