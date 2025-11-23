@@ -55,7 +55,7 @@ locals {
     "backup-trigger"          = 3004
     "fitx-fetcher"            = 3005
     "myfitnesspal-fetcher"    = 3006
-    "rcon"                    = 3007
+    "rcon-by-vincent"         = 3007
   }
 }
 
