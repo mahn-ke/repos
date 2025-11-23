@@ -21,7 +21,6 @@ locals {
       "photos",
       "availability",
       "fitness",
-      "errors",
       "pretix",
       "rcon"
     ] : replace("${name}.by.vincent", ".", "-") => replace("${name}.by.vincent", ".", "-")
