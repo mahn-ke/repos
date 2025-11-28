@@ -22,7 +22,8 @@ locals {
       "availability",
       "fitness",
       "pretix",
-      "rcon"
+      "rcon",
+      "errors"
     ] : replace("${name}.by.vincent", ".", "-") => replace("${name}.by.vincent", ".", "-")
   }
   oauth_clients = {
