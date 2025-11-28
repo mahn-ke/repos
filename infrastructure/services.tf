@@ -37,9 +37,6 @@ locals {
       "paperless" = {
         display_name = "Paperless"
       }
-      "umap" = {
-        display_name = "umap"
-      }
       "photos" = {
         display_name = "Immich"
         valid_redirect_urls = [
