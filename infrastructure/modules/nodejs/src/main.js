@@ -1,9 +1,9 @@
 import http from 'http';
 
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 const server = http.createServer((req, res) => {
-    if (req.url !== '/healthz') {
+    if (req.url === '/healthz') {
         res.writeHead(200);
         res.end('OK');
     }
