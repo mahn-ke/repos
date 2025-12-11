@@ -24,7 +24,8 @@ locals {
       "pretix",
       "rcon",
       "errors",
-      "sl"
+      "sl",
+      "slides"
     ] : replace("${name}.by.vincent", ".", "-") => replace("${name}.by.vincent", ".", "-")
   }
   oauth_clients = {
@@ -55,6 +56,7 @@ locals {
     "myfitnesspal-fetcher"    = 3006
     "rcon-by-vincent"         = 3007
     "sl-by-vincent"           = 3008
+    "slides-by-vincent"       = 3009
   }
 }
 
