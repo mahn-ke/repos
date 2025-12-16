@@ -25,7 +25,8 @@ locals {
       "rcon",
       "errors",
       "slides",
-      "invoices"
+      "invoices",
+      "wallpaper"
     ] : replace("${name}.by.vincent", ".", "-") => replace("${name}.by.vincent", ".", "-")
   }
   oauth_clients = {
