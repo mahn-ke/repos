@@ -27,7 +27,7 @@ locals {
       "slides",
       "invoices",
       "wallpapers",
-      "kiosk"
+      "kiosk.39c3"
     ] : replace("${name}.by.vincent", ".", "-") => replace("${name}.by.vincent", ".", "-")
   }
   oauth_clients = {
@@ -59,7 +59,7 @@ locals {
     "rcon-by-vincent"         = 3007
     "slides-by-vincent"       = 3009
     "wallpapers-by-vincent"   = 3010
-    "kiosk-by-vincent"        = 3011
+    "kiosk-39c3-by-vincent    = 3011
   }
 }
 
