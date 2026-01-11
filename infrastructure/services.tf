@@ -35,6 +35,9 @@ locals {
       "ttrss" = {
         display_name = "Tiny Tiny RSS"
       }
+      "cloud" = {
+        display_name = "Nextcloud"
+      }
       "containers" = {
         display_name = "Portainer"
       }
