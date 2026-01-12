@@ -38,6 +38,9 @@ locals {
       "cloud" = {
         display_name = "Nextcloud"
       }
+      "errors" = {
+        display_name = "GlitchTip"
+      }
       "containers" = {
         display_name = "Portainer"
       }
