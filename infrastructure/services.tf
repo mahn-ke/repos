@@ -27,7 +27,8 @@ locals {
       "slides",
       "invoices",
       "wallpapers",
-      "kiosk.39c3"
+      "kiosk.39c3",
+      "cccbib"
     ] : replace("${name}.by.vincent", ".", "-") => replace("${name}.by.vincent", ".", "-")
   }
   oauth_clients = {
