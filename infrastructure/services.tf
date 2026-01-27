@@ -48,6 +48,9 @@ locals {
       "paperless" = {
         display_name = "Paperless"
       }
+      "jellyfin" = {
+        display_name = "Jellyfin"
+      }
       "photos" = {
         display_name = "Immich"
         valid_redirect_urls = [
