@@ -51,6 +51,9 @@ locals {
       }
       "jellyfin" = {
         display_name = "Jellyfin"
+        valid_redirect_urls = [
+          "http://jellyfin.vincent.mahn.ke"
+        ]
       }
       "photos" = {
         display_name = "Immich"
