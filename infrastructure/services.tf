@@ -52,7 +52,7 @@ locals {
       "jellyfin" = {
         display_name = "Jellyfin"
         valid_redirect_urls = [
-          "http://jellyfin.vincent.mahn.ke"
+          "http://jellyfin.vincent.mahn.ke/*"
         ]
       }
       "photos" = {
