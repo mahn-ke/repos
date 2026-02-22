@@ -29,7 +29,9 @@ locals {
       "invoices",
       "wallpapers",
       "kiosk.39c3",
-      "cccbib"
+      "cccbib",
+      "mancala-client",
+      "mancala-server"
     ] : replace("${name}.by.vincent", ".", "-") => replace("${name}.by.vincent", ".", "-")
   }
   oauth_clients = {
@@ -64,16 +66,18 @@ locals {
     } : "${replace(key, ".", "-")}-by-vincent" => value
   }
   nodejs = {
-    "gamereleases-by-vincent" = 3000
-    "availability-by-vincent" = 3001
-    "fah-break"               = 3003
-    "backup-trigger"          = 3004
-    "fitx-fetcher"            = 3005
-    "myfitnesspal-fetcher"    = 3006
-    "rcon-by-vincent"         = 3007
-    "slides-by-vincent"       = 3009
-    "wallpapers-by-vincent"   = 3010
-    "kiosk-39c3-by-vincent"   = 3011
+    "gamereleases-by-vincent"   = 3000
+    "availability-by-vincent"   = 3001
+    "fah-break"                 = 3003
+    "backup-trigger"            = 3004
+    "fitx-fetcher"              = 3005
+    "myfitnesspal-fetcher"      = 3006
+    "rcon-by-vincent"           = 3007
+    "slides-by-vincent"         = 3009
+    "wallpapers-by-vincent"     = 3010
+    "kiosk-39c3-by-vincent"     = 3011
+    "mancala-client-by-vincent" = 3012
+    "mancala-server-by-vincent" = 3013
   }
 }
 
