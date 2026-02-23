@@ -30,8 +30,7 @@ locals {
       "wallpapers",
       "kiosk.39c3",
       "cccbib",
-      "mancala-client",
-      "mancala-server"
+      "mancala-client"
     ] : replace("${name}.by.vincent", ".", "-") => replace("${name}.by.vincent", ".", "-")
   }
   oauth_clients = {
@@ -63,6 +62,12 @@ locals {
           "app.immich:///oauth-callback"
         ]
       }
+      "matrix" = {
+        display_name = "Matrix"
+        valid_redirect_urls = [
+          "https://matrix.by.vincent.mahn.ke/_synapse/client/oidc/callback"
+        ]
+      }
     } : "${replace(key, ".", "-")}-by-vincent" => value
   }
   nodejs = {
@@ -77,7 +82,6 @@ locals {
     "wallpapers-by-vincent"     = 3010
     "kiosk-39c3-by-vincent"     = 3011
     "mancala-client-by-vincent" = 3012
-    "mancala-server-by-vincent" = 3013
   }
 }
 
