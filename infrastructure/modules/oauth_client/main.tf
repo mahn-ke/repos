@@ -36,7 +36,7 @@ resource "keycloak_openid_client" "openid_client" {
   use_refresh_tokens         = false
   standard_flow_enabled      = true
   backchannel_logout_url     = var.backchannel_logout_url
-  pkce_code_challenge_method = coalesce(var.pkce_code_challenge_method, "S256")
+  pkce_code_challenge_method = var.pkce_code_challenge_method
 }
 
 
