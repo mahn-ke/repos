@@ -70,6 +70,7 @@ locals {
         valid_redirect_urls = [
           "https://matrix.by.vincent.mahn.ke/_synapse/client/oidc/callback"
         ]
+        backchannel_logout_url = "https://matrix.by.vincent.mahn.ke/_synapse/client/oidc/backchannel_logout"
       }
     } : "${replace(key, ".", "-")}-by-vincent" => value
   }

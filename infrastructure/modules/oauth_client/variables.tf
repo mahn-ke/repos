@@ -13,10 +13,15 @@ variable "valid_redirect_urls" {
   type        = list(string)
 }
 
+variable "backchannel_logout_url" {
+  description = "URL that called to inform the client about logouts"
+  type        = list(string)
+}
+
 variable "pkce_code_challenge_method" {
   description = "https://registry.terraform.io/providers/keycloak/keycloak/latest/docs/resources/openid_client#pkce_code_challenge_method-1"
   type        = string
-  default     = "S256"
+  default     = null
 }
 
 variable "display_name" {

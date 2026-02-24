@@ -35,7 +35,8 @@ resource "keycloak_openid_client" "openid_client" {
   base_url                   = "https://${local.subdomain_label}.by.vincent.mahn.ke"
   use_refresh_tokens         = false
   standard_flow_enabled      = true
-  pkce_code_challenge_method = var.pkce_code_challenge_method
+  backchannel_logout_url     = var.backchannel_logout_url
+  pkce_code_challenge_method = coalesce(var.pkce_code_challenge_method, "S256")
 }
 
 
