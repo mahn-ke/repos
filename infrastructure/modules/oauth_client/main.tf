@@ -37,6 +37,7 @@ resource "keycloak_openid_client" "openid_client" {
   standard_flow_enabled      = true
   backchannel_logout_url     = var.backchannel_logout_url
   pkce_code_challenge_method = var.pkce_code_challenge_method
+  web_origins                = var.web_origins
 }
 
 

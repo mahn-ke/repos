@@ -38,6 +38,7 @@ locals {
       "ttrss" = {
         display_name               = "Tiny Tiny RSS"
         pkce_code_challenge_method = ""
+        web_origins                = "https://ttrss.by.vincent.mahn.ke"
       }
       "cloud" = {
         display_name = "Nextcloud"
@@ -128,6 +129,7 @@ module "oauth_client" {
   valid_redirect_urls        = lookup(each.value, "valid_redirect_urls", [])
   backchannel_logout_url     = lookup(each.value, "backchannel_logout_url", "")
   pkce_code_challenge_method = lookup(each.value, "pkce_code_challenge_method", "S256")
+  web_origins                = lookup(each.value, "web_origins", "")
   display_name               = each.value.display_name
   user_vimaster              = data.github_user.current.id
 }
