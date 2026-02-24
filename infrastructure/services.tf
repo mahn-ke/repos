@@ -123,11 +123,13 @@ module "oauth_client" {
     keycloak = keycloak
   }
 
-  keycloak_realm_id   = data.keycloak_realm.sso_by_vincent_mahn_ke.id
-  repository_name     = module.general[each.key].repository_name
-  display_name        = each.value.display_name
-  valid_redirect_urls = lookup(each.value, "valid_redirect_urls", [])
-  user_vimaster       = data.github_user.current.id
+  keycloak_realm_id          = data.keycloak_realm.sso_by_vincent_mahn_ke.id
+  repository_name            = module.general[each.key].repository_name
+  valid_redirect_urls        = lookup(each.value, "valid_redirect_urls", [])
+  backchannel_logout_url     = each.value.backchannel_logout_url
+  pkce_code_challenge_method = each.value.pkce_code_challenge_method
+  display_name               = each.value.display_name
+  user_vimaster              = data.github_user.current.id
 }
 
 module "nodejs" {
