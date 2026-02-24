@@ -38,7 +38,7 @@ locals {
       "ttrss" = {
         display_name               = "Tiny Tiny RSS"
         pkce_code_challenge_method = ""
-        web_origins                = [
+        web_origins = [
           "https://ttrss.by.vincent.mahn.ke"
         ]
       }
