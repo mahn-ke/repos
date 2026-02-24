@@ -15,7 +15,7 @@ variable "valid_redirect_urls" {
 
 variable "backchannel_logout_url" {
   description = "URL that called to inform the client about logouts"
-  type        = list(string)
+  type        = string
   default     = ""
 }
 
