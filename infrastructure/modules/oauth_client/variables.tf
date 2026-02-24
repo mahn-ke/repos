@@ -27,8 +27,8 @@ variable "pkce_code_challenge_method" {
 
 variable "web_origins" {
   description = "https://registry.terraform.io/providers/keycloak/keycloak/latest/docs/resources/openid_client#pkce_code_challenge_method-1"
-  type        = string
-  default     = null
+  type        = list(string)
+  default     = []
 }
 
 variable "display_name" {
