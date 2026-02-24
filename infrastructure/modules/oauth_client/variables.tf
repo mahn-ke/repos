@@ -13,6 +13,12 @@ variable "valid_redirect_urls" {
   type        = list(string)
 }
 
+variable "pkce_code_challenge_method" {
+  description = "https://registry.terraform.io/providers/keycloak/keycloak/latest/docs/resources/openid_client#pkce_code_challenge_method-1"
+  type        = string
+  default     = "S256"
+}
+
 variable "display_name" {
   description = "Display name"
   type        = string

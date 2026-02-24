@@ -30,11 +30,12 @@ resource "keycloak_openid_client" "openid_client" {
     ["https://${local.subdomain_label}.by.vincent.mahn.ke/*"],
     var.valid_redirect_urls
   )
-  always_display_in_console = true
-  root_url                  = "https://${local.subdomain_label}.by.vincent.mahn.ke"
-  base_url                  = "https://${local.subdomain_label}.by.vincent.mahn.ke"
-  use_refresh_tokens        = false
-  standard_flow_enabled     = true
+  always_display_in_console  = true
+  root_url                   = "https://${local.subdomain_label}.by.vincent.mahn.ke"
+  base_url                   = "https://${local.subdomain_label}.by.vincent.mahn.ke"
+  use_refresh_tokens         = false
+  standard_flow_enabled      = true
+  pkce_code_challenge_method = var.pkce_code_challenge_method
 }
 
 

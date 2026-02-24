@@ -36,16 +36,19 @@ locals {
   oauth_clients = {
     for key, value in {
       "ttrss" = {
-        display_name = "Tiny Tiny RSS"
+        display_name               = "Tiny Tiny RSS"
+        pkce_code_challenge_method = ""
       }
       "cloud" = {
         display_name = "Nextcloud"
       }
       "errors" = {
-        display_name = "GlitchTip"
+        display_name               = "GlitchTip"
+        pkce_code_challenge_method = ""
       }
       "containers" = {
-        display_name = "Portainer"
+        display_name               = "Portainer"
+        pkce_code_challenge_method = ""
       }
       "paperless" = {
         display_name = "Paperless"
