@@ -147,3 +147,22 @@ module "nodejs" {
   port            = each.value
   user_vimaster   = data.github_user.current.id
 }
+
+locals {
+  repo_topics = {
+    for repo_key in distinct(concat(
+      keys(merge(local.subdomains, local.oauth_clients)),
+      keys(local.nodejs)
+    )) :
+    repo_key => distinct(concat(
+      contains(keys(merge(local.subdomains, local.oauth_clients)), repo_key) ? module.subdomain[repo_key].topics : [],
+      contains(keys(local.nodejs), repo_key) ? module.nodejs[repo_key].topics : [],
+    ))
+  }
+}
+
+resource "github_repository_topics" "repo_topics" {
+  for_each   = local.repo_topics
+  repository = module.general[each.key].repository_name
+  topics     = each.value
+}

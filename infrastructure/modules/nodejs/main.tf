@@ -7,11 +7,6 @@ terraform {
   }
 }
 
-resource "github_repository_topics" "repos" {
-  repository = var.repository_name
-  topics     = ["nodejs"]
-}
-
 resource "github_repository_file" "dockerfile" {
   repository          = var.repository_name
   file                = "app/Dockerfile"
@@ -71,4 +66,8 @@ resource "github_repository_file" "gitignore" {
   lifecycle {
     ignore_changes = [content]
   }
+}
+
+output "topics" {
+  value = ["nodejs"]
 }
