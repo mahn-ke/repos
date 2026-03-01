@@ -40,9 +40,10 @@ locals {
       "wallpapers" = {
         skip_uptime_check = true
       }
-      "kiosk.39c3"     = {}
-      "cccbib"         = {}
-      "mancala-client" = {}
+      "kiosk.39c3"          = {}
+      "handout.hackertours" = {}
+      "cccbib"              = {}
+      "mancala-client"      = {}
     } : replace("${key}.by.vincent", ".", "-") => value
   }
   oauth_clients = {
@@ -90,16 +91,17 @@ locals {
     } : "${replace(key, ".", "-")}-by-vincent" => value
   }
   nodejs = {
-    "gamereleases-by-vincent"   = 3000
-    "availability-by-vincent"   = 3001
-    "fah-break"                 = 3003
-    "backup-trigger"            = 3004
-    "fitx-fetcher"              = 3005
-    "myfitnesspal-fetcher"      = 3006
-    "slides-by-vincent"         = 3009
-    "wallpapers-by-vincent"     = 3010
-    "kiosk-39c3-by-vincent"     = 3011
-    "mancala-client-by-vincent" = 3012
+    "gamereleases-by-vincent"        = 3000
+    "availability-by-vincent"        = 3001
+    "handout-hackertours-by-vincent" = 3002
+    "fah-break"                      = 3003
+    "backup-trigger"                 = 3004
+    "fitx-fetcher"                   = 3005
+    "myfitnesspal-fetcher"           = 3006
+    "slides-by-vincent"              = 3009
+    "wallpapers-by-vincent"          = 3010
+    "kiosk-39c3-by-vincent"          = 3011
+    "mancala-client-by-vincent"      = 3012
   }
 }
 
