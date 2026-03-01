@@ -12,7 +12,7 @@ locals {
         skip_uptime_check = true
       }
       "uptime" = {}
-      "cloud" = {}
+      "cloud"  = {}
       "matrix" = {
         uptime_path = "/_matrix/static/"
       }
@@ -22,23 +22,23 @@ locals {
         skip_uptime_check = true
       }
       "notifications" = {}
-      "logging" = {}
+      "logging"       = {}
       "gamereleases" = {
         skip_uptime_check = true
       }
-      "paperless" = {}
-      "photos" = {}
+      "paperless"    = {}
+      "photos"       = {}
       "availability" = {}
-      "fitness" = {}
-      "pretix" = {}
-      "errors" = {}
-      "slides" = {}
-      "invoices" = {}
+      "fitness"      = {}
+      "pretix"       = {}
+      "errors"       = {}
+      "slides"       = {}
+      "invoices"     = {}
       "wallpapers" = {
         skip_uptime_check = true
       }
-      "kiosk.39c3" = {}
-      "cccbib" = {}
+      "kiosk.39c3"     = {}
+      "cccbib"         = {}
       "mancala-client" = {}
     } : replace("${key}.by.vincent", ".", "-") => value
   }
