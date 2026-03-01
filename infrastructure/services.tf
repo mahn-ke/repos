@@ -24,7 +24,7 @@ locals {
       "notifications" = {}
       "logging"       = {}
       "gamereleases" = {
-        skip_uptime_check = true
+        uptime_path = "/releases.ics"
       }
       "paperless"    = {}
       "photos"       = {}
