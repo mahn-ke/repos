@@ -165,13 +165,6 @@ resource "github_repository_topics" "repo_topics" {
   topics     = each.value
 }
 
-
-resource "github_repository_topics" "repo_topics" {
-  for_each   = local.repo_topics
-  repository = module.general[each.key].repository_name
-  topics     = each.value
-}
-
 resource "uptimekuma_monitor_http" "http_monitor" {
   for_each         = local.subdomains
   name             = "${each.key}.by.vincent.mahn.ke - HTTPS [TF]"
