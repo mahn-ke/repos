@@ -176,8 +176,8 @@ resource "github_repository_topics" "repo_topics" {
 }
 
 resource "uptimekuma_monitor_http" "http_monitor" {
-  for_each = { 
-    for key, value in local.subdomains : replace(key, "-", ".") => value 
+  for_each = {
+    for key, value in local.subdomains : replace(key, "-", ".") => value
   }
   name             = "${each.key}.mahn.ke - HTTPS [TF]"
   url              = "https://${each.key}.mahn.ke${each.value.uptime_path != null ? each.value.uptime_path : ""}"
