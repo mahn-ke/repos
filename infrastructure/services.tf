@@ -17,7 +17,9 @@ locals {
         uptime_path = "/_matrix/static/"
       }
       "irc" = {}
-      "sso" = {}
+      "sso" = {
+        uptime_path = "/realms/sso.by.vincent.mahn.ke/account/"
+      }
       "rustdesk" = {
         skip_uptime_check = true
       }
