@@ -167,8 +167,8 @@ resource "github_repository_topics" "repo_topics" {
 
 resource "uptimekuma_monitor_http" "http_monitor" {
   for_each         = { for key, value in local.subdomains : replace(key, "-", ".") => value }
-  name             = "${each.key}.by.vincent.mahn.ke - HTTPS [TF]"
-  url              = "https://${each.key}.by.vincent.mahn.ke"
+  name             = "${each.key}.mahn.ke - HTTPS [TF]"
+  url              = "https://${each.key}.mahn.ke"
   interval         = 30
   max_retries      = 5
   retry_interval   = 30
