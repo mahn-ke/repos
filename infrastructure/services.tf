@@ -164,3 +164,22 @@ resource "github_repository_topics" "repo_topics" {
   repository = module.general[each.key].repository_name
   topics     = each.value
 }
+
+
+resource "github_repository_topics" "repo_topics" {
+  for_each   = local.repo_topics
+  repository = module.general[each.key].repository_name
+  topics     = each.value
+}
+
+resource "uptimekuma_monitor_http" "http_monitor" {
+  for_each         = local.subdomains
+  name             = "${each.key}.by.vincent.mahn.ke - HTTPS [TF]"
+  url              = "https://${each.key}.by.vincent.mahn.ke"
+  interval         = 30
+  max_retries      = 5
+  retry_interval   = 30
+  timeout          = 24
+  notification_ids = [1]
+  active           = true
+}
