@@ -12,6 +12,7 @@ locals {
         skip_uptime_check = true
       }
       "uptime" = {}
+      "ttrss"  = {}
       "cloud"  = {}
       "matrix" = {
         uptime_path = "/_matrix/static/"
