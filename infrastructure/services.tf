@@ -41,7 +41,9 @@ locals {
         skip_uptime_check = true
       }
       "kiosk.39c3"          = {}
-      "handout.hackertours" = {}
+      "handout.hackertours" = {
+        skip_uptime_check = true
+      }
       "cccbib"              = {}
       "mancala-client"      = {}
     } : replace("${key}.by.vincent", ".", "-") => value
