@@ -7,30 +7,40 @@ locals {
     "hetzner-robot"      = "hetzner-robot"
   }
   subdomains = {
-    for name in [
-      "tfstate",
-      "uptime",
-      "cloud",
-      "matrix",
-      "irc",
-      "sso",
-      "rustdesk",
-      "notifications",
-      "logging",
-      "gamereleases",
-      "paperless",
-      "photos",
-      "availability",
-      "fitness",
-      "pretix",
-      "errors",
-      "slides",
-      "invoices",
-      "wallpapers",
-      "kiosk.39c3",
-      "cccbib",
-      "mancala-client"
-    ] : replace("${name}.by.vincent", ".", "-") => replace("${name}.by.vincent", ".", "-")
+    for key, value in {
+      "tfstate" = {
+        skip_uptime_check = true
+      }
+      "uptime" = {}
+      "cloud" = {}
+      "matrix" = {
+        uptime_path = "/_matrix/static/"
+      }
+      "irc" = {}
+      "sso" = {}
+      "rustdesk" = {
+        skip_uptime_check = true
+      }
+      "notifications" = {}
+      "logging" = {}
+      "gamereleases" = {
+        skip_uptime_check = true
+      }
+      "paperless" = {}
+      "photos" = {}
+      "availability" = {}
+      "fitness" = {}
+      "pretix" = {}
+      "errors" = {}
+      "slides" = {}
+      "invoices" = {}
+      "wallpapers" = {
+        skip_uptime_check = true
+      }
+      "kiosk.39c3" = {}
+      "cccbib" = {}
+      "mancala-client" = {}
+    } : replace("${key}.by.vincent", ".", "-") => value
   }
   oauth_clients = {
     for key, value in {
