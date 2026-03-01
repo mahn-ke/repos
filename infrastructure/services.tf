@@ -23,7 +23,6 @@ locals {
       "availability",
       "fitness",
       "pretix",
-      "rcon",
       "errors",
       "slides",
       "invoices",
@@ -84,7 +83,6 @@ locals {
     "backup-trigger"            = 3004
     "fitx-fetcher"              = 3005
     "myfitnesspal-fetcher"      = 3006
-    "rcon-by-vincent"           = 3007
     "slides-by-vincent"         = 3009
     "wallpapers-by-vincent"     = 3010
     "kiosk-39c3-by-vincent"     = 3011
