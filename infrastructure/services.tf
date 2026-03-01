@@ -183,11 +183,12 @@ resource "uptimekuma_monitor_http" "http_monitor" {
     for key, value in local.subdomains : replace(key, "-", ".") => value
     if lookup(value, "skip_uptime_check", false) == false
   }
-  name             = "${each.key}.mahn.ke - HTTPS [TF]"
-  url              = "https://${each.key}.mahn.ke${lookup(each.value, "uptime_path", "")}"
-  interval         = 30
-  max_retries      = 5
-  retry_interval   = 30
-  timeout          = 24
-  notification_ids = [1]
+  name                = "${each.key}.mahn.ke - HTTPS [TF]"
+  url                 = "https://${each.key}.mahn.ke${lookup(each.value, "uptime_path", "")}"
+  interval            = 30
+  max_retries         = 5
+  retry_interval      = 30
+  timeout             = 24
+  notification_ids    = [1]
+  expiry_notification = true
 }
