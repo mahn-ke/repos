@@ -178,6 +178,7 @@ resource "github_repository_topics" "repo_topics" {
 resource "uptimekuma_monitor_http" "http_monitor" {
   for_each = {
     for key, value in local.subdomains : replace(key, "-", ".") => value
+    if lookup(value, "skip_uptime_check", false) == false
   }
   name             = "${each.key}.mahn.ke - HTTPS [TF]"
   url              = "https://${each.key}.mahn.ke${lookup(each.value, "uptime_path", "")}"
@@ -186,5 +187,4 @@ resource "uptimekuma_monitor_http" "http_monitor" {
   retry_interval   = 30
   timeout          = 24
   notification_ids = [1]
-  active           = lookup(each.value, "skip_uptime_check", false) != true
 }
