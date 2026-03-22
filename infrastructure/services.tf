@@ -4,7 +4,7 @@ locals {
     "repos"              = "repos"
     "resources"          = "resources"
     "storage-management" = "storage-management"
-    "hetzner-robot"      = "hetzner-robot"
+    "ccchh-runner"       = "ccchh-runner"
   }
   subdomains = {
     for key, value in {
