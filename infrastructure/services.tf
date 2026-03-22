@@ -40,12 +40,12 @@ locals {
       "wallpapers" = {
         skip_uptime_check = true
       }
-      "kiosk.39c3"          = {}
+      "kiosk.39c3" = {}
       "handout.hackertours" = {
         skip_uptime_check = true
       }
-      "cccbib"              = {}
-      "mancala-client"      = {}
+      "cccbib"         = {}
+      "mancala-client" = {}
     } : replace("${key}.by.vincent", ".", "-") => value
   }
   oauth_clients = {
