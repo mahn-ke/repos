@@ -40,6 +40,9 @@ locals {
       "wallpapers" = {
         skip_uptime_check = true
       }
+      "teamsbg" = {
+        skip_uptime_check = true
+      }
       "kiosk.39c3" = {}
       "handout.hackertours" = {
         skip_uptime_check = true
@@ -106,6 +109,7 @@ locals {
     "kiosk-39c3-by-vincent"          = 3011
     "mancala-client-by-vincent"      = 3012
     "crop-client-by-vincent"         = 3013
+    "teamsbg-by-vincent"             = 3014
   }
 }
 
