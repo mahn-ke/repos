@@ -46,7 +46,7 @@ locals {
       }
       "cccbib"         = {}
       "mancala-client" = {}
-      "crop" = {}
+      "crop"           = {}
     } : replace("${key}.by.vincent", ".", "-") => value
   }
   oauth_clients = {
