@@ -108,7 +108,7 @@ locals {
     "wallpapers-by-vincent"          = 3010
     "kiosk-39c3-by-vincent"          = 3011
     "mancala-client-by-vincent"      = 3012
-    "crop-client-by-vincent"         = 3013
+    "crop-by-vincent"                = 3013
     "teamsbg-by-vincent"             = 3014
   }
 }
