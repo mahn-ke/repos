@@ -50,6 +50,7 @@ locals {
       "cccbib"         = {}
       "mancala-client" = {}
       "crop"           = {}
+      "forecast"       = {}
     } : replace("${key}.by.vincent", ".", "-") => value
   }
   oauth_clients = {
@@ -110,6 +111,7 @@ locals {
     "mancala-client-by-vincent"      = 3012
     "crop-by-vincent"                = 3013
     "teamsbg-by-vincent"             = 3014
+    "forecast-by-vincent"            = 3015
   }
 }
 
