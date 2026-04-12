@@ -51,6 +51,7 @@ locals {
       "mancala-client" = {}
       "crop"           = {}
       "forecast"       = {}
+      "secrets"        = {}
     } : replace("${key}.by.vincent", ".", "-") => value
   }
   oauth_clients = {
@@ -94,6 +95,9 @@ locals {
           "https://matrix.by.vincent.mahn.ke/_synapse/client/oidc/callback"
         ]
         backchannel_logout_url = "https://matrix.by.vincent.mahn.ke/_synapse/client/oidc/backchannel_logout"
+      }
+      "secrets" = {
+        display_name = "Bitwarden"
       }
     } : "${replace(key, ".", "-")}-by-vincent" => value
   }
