@@ -21,7 +21,7 @@ locals {
       "sso" = {
         uptime_path = "/realms/sso.by.vincent.mahn.ke/account/"
       }
-      "rustdesk" = {
+      "api.rustdesk" = {
         skip_uptime_check = true
       }
       "notifications" = {}
