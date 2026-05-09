@@ -52,6 +52,7 @@ locals {
       "crop"           = {}
       "forecast"       = {}
       "secrets"        = {}
+      "rcon"           = {}
     } : replace("${key}.by.vincent", ".", "-") => value
   }
   oauth_clients = {
