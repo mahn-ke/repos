@@ -53,6 +53,7 @@ locals {
       "forecast"       = {}
       "secrets"        = {}
       "rcon"           = {}
+      "eurovision"     = {}
     } : replace("${key}.by.vincent", ".", "-") => value
   }
   oauth_clients = {
@@ -117,6 +118,7 @@ locals {
     "crop-by-vincent"                = 3013
     "teamsbg-by-vincent"             = 3014
     "forecast-by-vincent"            = 3015
+    "eurovision-by-vincent"          = 3016
   }
 }
 
