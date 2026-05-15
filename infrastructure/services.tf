@@ -118,7 +118,8 @@ locals {
     "crop-by-vincent"                = 3013
     "teamsbg-by-vincent"             = 3014
     "forecast-by-vincent"            = 3015
-    "eurovision-by-vincent"          = 3016
+    "rcon-by-vincent"                = 3016
+    "eurovision-by-vincent"          = 3017
   }
 }
 
