@@ -76,6 +76,9 @@ locals {
         display_name               = "Portainer"
         pkce_code_challenge_method = ""
       }
+      "fitness" = {
+        display_name = "wger"
+      }
       "paperless" = {
         display_name = "Paperless"
       }
