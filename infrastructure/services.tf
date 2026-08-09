@@ -85,7 +85,8 @@ locals {
         display_name               = "Data Dashboard"
         pkce_code_challenge_method = ""
         valid_redirect_urls = [
-          "http://localhost:8082/*"
+          "http://localhost:8082/*",
+          "https://reports.by.vincent.mahn.ke/*"
         ]
       }
       "paperless" = {
