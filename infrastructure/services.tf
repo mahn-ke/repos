@@ -83,6 +83,9 @@ locals {
       "reports" = {
         display_name = "Data Dashboard"
       }
+      "garmin-fetcher" = {
+        display_name = "Garmin Fetcher"
+      }
       "paperless" = {
         display_name = "Paperless"
       }
@@ -127,6 +130,7 @@ locals {
     "forecast-by-vincent"            = 3015
     "rcon-by-vincent"                = 3016
     "eurovision-by-vincent"          = 3017
+    "garmin-fetcher"                 = 3018
   }
 }
 
