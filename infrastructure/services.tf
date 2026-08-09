@@ -55,6 +55,7 @@ locals {
       "secrets"        = {}
       "rcon"           = {}
       "eurovision"     = {}
+      "prometheus"     = {}
     } : replace("${key}.by.vincent", ".", "-") => value
   }
   oauth_clients = {
@@ -107,6 +108,13 @@ locals {
       }
       "secrets" = {
         display_name = "Bitwarden"
+      }
+      "prometheus" = {
+        display_name               = "Prometheus"
+        pkce_code_challenge_method = ""
+        valid_redirect_urls = [
+          "https://prometheus.by.vincent.mahn.ke/oauth2/callback"
+        ]
       }
     } : "${replace(key, ".", "-")}-by-vincent" => value
   }
