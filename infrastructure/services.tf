@@ -83,6 +83,9 @@ locals {
       }
       "reports" = {
         display_name = "Data Dashboard"
+        valid_redirect_urls = [
+          "http://localhost:8082/*"
+        ]
       }
       "paperless" = {
         display_name = "Paperless"
