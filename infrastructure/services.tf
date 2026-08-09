@@ -86,6 +86,12 @@ locals {
       "garmin-fetcher" = {
         display_name = "Garmin Fetcher"
       }
+      "fitx-fetcher" = {
+        display_name = "FitX Fetcher"
+      }
+      "myfitnesspal-fetcher" = {
+        display_name = "MyFitnessPal Fetcher"
+      }
       "paperless" = {
         display_name = "Paperless"
       }
