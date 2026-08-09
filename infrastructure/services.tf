@@ -33,6 +33,7 @@ locals {
       "photos"       = {}
       "availability" = {}
       "fitness"      = {}
+      "reports"      = {}
       "pretix"       = {}
       "errors"       = {}
       "slides"       = {}
@@ -78,6 +79,9 @@ locals {
       }
       "fitness" = {
         display_name = "wger"
+      }
+      "reports" = {
+        display_name = "Data Dashboard"
       }
       "paperless" = {
         display_name = "Paperless"
