@@ -56,6 +56,7 @@ locals {
       "rcon"           = {}
       "eurovision"     = {}
       "prometheus"     = {}
+      "gdqreminder"    = {}
     } : replace("${key}.by.vincent", ".", "-") => value
   }
   oauth_clients = {
@@ -121,6 +122,9 @@ locals {
           "https://prometheus.by.vincent.mahn.ke/oauth2/callback"
         ]
       }
+      "gdqreminder" = {
+        display_name = "GDQ Reminder Backend"
+      }
     } : "${replace(key, ".", "-")}-by-vincent" => value
   }
   nodejs = {
@@ -140,6 +144,7 @@ locals {
     "forecast-by-vincent"            = 3015
     "rcon-by-vincent"                = 3016
     "eurovision-by-vincent"          = 3017
+    "gdqreminder-by-vincent"         = 3018
   }
 }
 
