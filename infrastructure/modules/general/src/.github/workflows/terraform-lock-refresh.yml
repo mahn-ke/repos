@@ -1,0 +1,9 @@
+name: Refresh Terraform provider lock files
+
+on:
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    uses: mahn-ke/.github/.github/workflows/template-terraform-lock-refresh.yml@main
+    secrets: inherit
