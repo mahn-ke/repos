@@ -20,7 +20,7 @@ resource "github_repository_ruleset" "pull_requests_on_default" {
   enforcement = "active"
 
   dynamic "bypass_actors" {
-    for_each = var.infrastructure_review ? [] : [
+    for_each = [
       { actor_id = 0, actor_type = "OrganizationAdmin" },
       { actor_id = 5, actor_type = "RepositoryRole" },
     ]
