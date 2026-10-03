@@ -1,0 +1,21 @@
+name: Test protected generated configuration
+
+on:
+  pull_request:
+    paths: ['tools/**', 'infrastructure/modules/general/**', '.github/workflows/test-generated-config.yml']
+  push:
+    branches: [main]
+    paths: ['tools/**', 'infrastructure/modules/general/**']
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - run: node --test tools/generated-config*.test.mjs
