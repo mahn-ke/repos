@@ -33,7 +33,8 @@ export function generatedFiles(repositoryDirectory, repository = protectedReposi
   }
   const renovate = JSON.parse(read('src/renovate.json5'));
   files['renovate.json'] = canonical({ ...renovate, dependencyDashboard: true, automerge: false,
-    vulnerabilityAlerts: { enabled: true, labels: ['automerge', 'security'] } });
+    vulnerabilityAlerts: { enabled: true, labels: ['automerge', 'security'] } })
+    .replace(/[<>&\u2028\u2029]/g, character => `\\u${character.charCodeAt(0).toString(16).padStart(4, '0')}`);
   return files;
 }
 
