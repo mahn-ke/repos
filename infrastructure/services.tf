@@ -31,7 +31,6 @@ locals {
       }
       "paperless"    = {}
       "photos"       = {}
-      "availability" = {}
       "fitness"      = {}
       "reports"      = {}
       "pretix"       = {}
@@ -129,7 +128,6 @@ locals {
   }
   nodejs = {
     "gamereleases-by-vincent"        = 3000
-    "availability-by-vincent"        = 3001
     "handout-hackertours-by-vincent" = 3002
     "fah-break"                      = 3003
     "backup-trigger"                 = 3004
