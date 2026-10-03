@@ -18,4 +18,5 @@ concurrency:
 jobs:
   deploy:
     uses: mahn-ke/.github/.github/workflows/template-deploy.yml@main
+# GDQ_REVIEW_INPUTS
     secrets: inherit

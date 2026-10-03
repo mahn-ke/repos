@@ -159,8 +159,9 @@ module "general" {
     github = github
   }
 
-  repository_reference = each.key
-  user_vimaster        = data.github_user.current.id
+  repository_reference  = each.key
+  user_vimaster         = data.github_user.current.id
+  infrastructure_review = each.key == "gdqreminder-by-vincent"
 }
 
 module "subdomain" {
