@@ -47,8 +47,16 @@ export function prepareBranch(api, manifest) {
     return 'created';
   }
   const comparison = api(`repos/${repository}/compare/main...${generatedBranch}`);
+  if ((comparison.files || []).length >= 300) throw new Error('Staging diff may be truncated');
   if (comparison.files?.some(file => !Object.hasOwn(manifest, file.filename) || ['removed', 'renamed'].includes(file.status))) {
     throw new Error('Unrelated edits on generated branch; refusing preparation');
+  }
+  for (const entry of comparison.files || []) {
+    const file = api(`repos/${repository}/contents/${entry.filename}?ref=${branch.object.sha}`);
+    const actual = Buffer.from(file.content, 'base64').toString();
+    if (!matchingContent(entry.filename, actual, manifest[entry.filename])) {
+      throw new Error('Staged content differs from current generator; review existing branch before refreshing it');
+    }
   }
   if (comparison.behind_by > 0) {
     if (comparison.ahead_by === 0) {
