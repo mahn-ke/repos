@@ -33,7 +33,7 @@ jobs:
           ref: main
           persist-credentials: false
           path: policy-tools
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
       - run: node policy-tools/tools/infrastructure-review.mjs
