@@ -29,14 +29,14 @@ locals {
       "gamereleases" = {
         uptime_path = "/releases.ics"
       }
-      "paperless"    = {}
-      "photos"       = {}
-      "fitness"      = {}
-      "reports"      = {}
-      "pretix"       = {}
-      "errors"       = {}
-      "slides"       = {}
-      "invoices"     = {}
+      "paperless" = {}
+      "photos"    = {}
+      "fitness"   = {}
+      "reports"   = {}
+      "pretix"    = {}
+      "errors"    = {}
+      "slides"    = {}
+      "invoices"  = {}
       "wallpapers" = {
         skip_uptime_check = true
       }
@@ -47,15 +47,16 @@ locals {
       "handout.hackertours" = {
         skip_uptime_check = true
       }
-      "cccbib"         = {}
-      "mancala-client" = {}
-      "crop"           = {}
-      "forecast"       = {}
-      "secrets"        = {}
-      "rcon"           = {}
-      "eurovision"     = {}
-      "prometheus"     = {}
-      "gdqreminder"    = {}
+      "backoffice.hackertours" = {}
+      "cccbib"                 = {}
+      "mancala-client"         = {}
+      "crop"                   = {}
+      "forecast"               = {}
+      "secrets"                = {}
+      "rcon"                   = {}
+      "eurovision"             = {}
+      "prometheus"             = {}
+      "gdqreminder"            = {}
     } : replace("${key}.by.vincent", ".", "-") => value
   }
   oauth_clients = {
@@ -127,22 +128,23 @@ locals {
     } : "${replace(key, ".", "-")}-by-vincent" => value
   }
   nodejs = {
-    "gamereleases-by-vincent"        = 3000
-    "handout-hackertours-by-vincent" = 3002
-    "fah-break"                      = 3003
-    "backup-trigger"                 = 3004
-    "fitx-fetcher"                   = 3005
-    "myfitnesspal-fetcher"           = 3006
-    "slides-by-vincent"              = 3009
-    "wallpapers-by-vincent"          = 3010
-    "kiosk-39c3-by-vincent"          = 3011
-    "mancala-client-by-vincent"      = 3012
-    "crop-by-vincent"                = 3013
-    "teamsbg-by-vincent"             = 3014
-    "forecast-by-vincent"            = 3015
-    "rcon-by-vincent"                = 3016
-    "eurovision-by-vincent"          = 3017
-    "gdqreminder-by-vincent"         = 3018
+    "gamereleases-by-vincent"           = 3000
+    "handout-hackertours-by-vincent"    = 3002
+    "fah-break"                         = 3003
+    "backup-trigger"                    = 3004
+    "fitx-fetcher"                      = 3005
+    "myfitnesspal-fetcher"              = 3006
+    "slides-by-vincent"                 = 3009
+    "wallpapers-by-vincent"             = 3010
+    "kiosk-39c3-by-vincent"             = 3011
+    "mancala-client-by-vincent"         = 3012
+    "crop-by-vincent"                   = 3013
+    "teamsbg-by-vincent"                = 3014
+    "forecast-by-vincent"               = 3015
+    "rcon-by-vincent"                   = 3016
+    "eurovision-by-vincent"             = 3017
+    "gdqreminder-by-vincent"            = 3018
+    "backoffice-hackertours-by-vincent" = 3019
   }
 }
 
