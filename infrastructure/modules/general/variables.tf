@@ -13,3 +13,9 @@ variable "infrastructure_review" {
   type        = bool
   default     = false
 }
+
+variable "renovate_package_rules" {
+  description = "Repository-specific Renovate package rules retained alongside shared defaults"
+  type        = any
+  default     = []
+}

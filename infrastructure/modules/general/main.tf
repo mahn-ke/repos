@@ -7,6 +7,17 @@ terraform {
   }
 }
 
+locals {
+  renovate_base_content = var.infrastructure_review ? jsonencode(merge(jsondecode(file("${path.module}/src/renovate.json5")), {
+    dependencyDashboard = true
+    automerge           = false
+    vulnerabilityAlerts = {
+      enabled = true
+      labels  = ["automerge", "security"]
+    }
+  })) : file("${path.module}/src/renovate.json5")
+}
+
 variable "GITHUB_WORKFLOWS" {
   description = "GitHub App integration ID for required status checks"
   type        = number
@@ -144,14 +155,9 @@ resource "github_repository_file" "renovate" {
   branch     = local.generated_config_branch
   repository = github_repository.repos.name
   file       = "renovate.json"
-  content = var.infrastructure_review ? jsonencode(merge(jsondecode(file("${path.module}/src/renovate.json5")), {
-    dependencyDashboard = true
-    automerge           = false
-    vulnerabilityAlerts = {
-      enabled = true
-      labels  = ["automerge", "security"]
-    }
-  })) : file("${path.module}/src/renovate.json5")
+  content = length(var.renovate_package_rules) > 0 ? jsonencode(merge(jsondecode(local.renovate_base_content), {
+    packageRules = var.renovate_package_rules
+  })) : local.renovate_base_content
   commit_message      = "Managed by Terraform${strcontains(github_repository.repos.name, "repos") ? " [no ci]" : ""}"
   overwrite_on_create = false
 }

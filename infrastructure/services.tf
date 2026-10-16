@@ -80,7 +80,8 @@ locals {
         pkce_code_challenge_method = ""
       }
       "fitness" = {
-        display_name = "wger"
+        display_name               = "wger"
+        pkce_code_challenge_method = ""
       }
       "reports" = {
         display_name               = "Data Dashboard"
@@ -113,7 +114,8 @@ locals {
         backchannel_logout_url = "https://matrix.by.vincent.mahn.ke/_synapse/client/oidc/backchannel_logout"
       }
       "secrets" = {
-        display_name = "Bitwarden"
+        display_name       = "Bitwarden"
+        use_refresh_tokens = true
       }
       "prometheus" = {
         display_name               = "Prometheus"
@@ -146,6 +148,21 @@ locals {
     "gdqreminder-by-vincent"            = 3018
     "backoffice-hackertours-by-vincent" = 3019
   }
+  renovate_package_rules = {
+    "cloud-by-vincent" = [{
+      matchDatasources  = ["docker"]
+      matchPackageNames = ["ghcr.io/vimaster/nextcloud-sharelinkviewtracker"]
+      versioning        = "semver"
+      pinDigests        = true
+      automerge         = false
+    }]
+    "slides-by-vincent" = [{
+      description       = "Keep Babel compatible with @rollup/plugin-babel's Babel 7 peer requirement"
+      matchManagers     = ["npm"]
+      matchPackageNames = ["@babel/core", "@babel/eslint-parser", "@babel/preset-env"]
+      allowedVersions   = "<8.0.0"
+    }]
+  }
 }
 
 data "github_user" "current" {
@@ -159,9 +176,10 @@ module "general" {
     github = github
   }
 
-  repository_reference  = each.key
-  user_vimaster         = data.github_user.current.id
-  infrastructure_review = each.key == "gdqreminder-by-vincent"
+  repository_reference   = each.key
+  user_vimaster          = data.github_user.current.id
+  infrastructure_review  = each.key == "gdqreminder-by-vincent"
+  renovate_package_rules = lookup(local.renovate_package_rules, each.key, [])
 }
 
 module "subdomain" {
@@ -188,6 +206,7 @@ module "oauth_client" {
   valid_redirect_urls        = lookup(each.value, "valid_redirect_urls", [])
   backchannel_logout_url     = lookup(each.value, "backchannel_logout_url", "")
   pkce_code_challenge_method = lookup(each.value, "pkce_code_challenge_method", "S256")
+  use_refresh_tokens         = lookup(each.value, "use_refresh_tokens", false)
   web_origins                = lookup(each.value, "web_origins", [])
   display_name               = each.value.display_name
   user_vimaster              = data.github_user.current.id

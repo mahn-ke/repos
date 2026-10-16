@@ -33,7 +33,7 @@ resource "keycloak_openid_client" "openid_client" {
   always_display_in_console  = true
   root_url                   = "https://${local.subdomain_label}.by.vincent.mahn.ke"
   base_url                   = "https://${local.subdomain_label}.by.vincent.mahn.ke"
-  use_refresh_tokens         = false
+  use_refresh_tokens         = var.use_refresh_tokens
   standard_flow_enabled      = true
   backchannel_logout_url     = var.backchannel_logout_url
   pkce_code_challenge_method = var.pkce_code_challenge_method
@@ -42,9 +42,10 @@ resource "keycloak_openid_client" "openid_client" {
 
 
 resource "github_actions_secret" "oauth_name" {
-  repository      = var.repository_name
-  secret_name     = "OAUTH_NAME"
-  plaintext_value = "Keycloak"
+  repository       = var.repository_name
+  secret_name      = "OAUTH_NAME"
+  plaintext_value  = "Keycloak"
+  destroy_on_drift = true
 }
 
 resource "github_codespaces_secret" "oauth_name" {
@@ -60,9 +61,10 @@ resource "github_dependabot_secret" "oauth_name" {
 }
 
 resource "github_actions_secret" "oauth_url" {
-  repository      = var.repository_name
-  secret_name     = "OAUTH_URL"
-  plaintext_value = "https://sso.by.vincent.mahn.ke/realms/sso.by.vincent.mahn.ke"
+  repository       = var.repository_name
+  secret_name      = "OAUTH_URL"
+  plaintext_value  = "https://sso.by.vincent.mahn.ke/realms/sso.by.vincent.mahn.ke"
+  destroy_on_drift = true
 }
 
 resource "github_codespaces_secret" "oauth_url" {
@@ -78,9 +80,10 @@ resource "github_dependabot_secret" "oauth_url" {
 }
 
 resource "github_actions_secret" "oauth_client_id" {
-  repository      = var.repository_name
-  secret_name     = "OAUTH_CLIENT_ID"
-  plaintext_value = keycloak_openid_client.openid_client.client_id
+  repository       = var.repository_name
+  secret_name      = "OAUTH_CLIENT_ID"
+  plaintext_value  = keycloak_openid_client.openid_client.client_id
+  destroy_on_drift = true
 }
 
 resource "github_codespaces_secret" "oauth_client_id" {
@@ -96,9 +99,10 @@ resource "github_dependabot_secret" "oauth_client_id" {
 }
 
 resource "github_actions_secret" "oauth_client_secret" {
-  repository      = var.repository_name
-  secret_name     = "OAUTH_CLIENT_SECRET"
-  plaintext_value = keycloak_openid_client.openid_client.client_secret
+  repository       = var.repository_name
+  secret_name      = "OAUTH_CLIENT_SECRET"
+  plaintext_value  = keycloak_openid_client.openid_client.client_secret
+  destroy_on_drift = true
 }
 
 resource "github_codespaces_secret" "oauth_client_secret" {

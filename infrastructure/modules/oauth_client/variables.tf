@@ -31,6 +31,12 @@ variable "web_origins" {
   default     = []
 }
 
+variable "use_refresh_tokens" {
+  description = "Whether this client issues refresh tokens"
+  type        = bool
+  default     = false
+}
+
 variable "display_name" {
   description = "Display name"
   type        = string
