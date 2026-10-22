@@ -57,6 +57,7 @@ locals {
       "eurovision"             = {}
       "prometheus"             = {}
       "gdqreminder"            = {}
+      "multiworld"             = {}
     } : replace("${key}.by.vincent", ".", "-") => value
   }
   oauth_clients = {
@@ -126,6 +127,9 @@ locals {
       }
       "gdqreminder" = {
         display_name = "GDQ Reminder Backend"
+      }
+      "multiworld" = {
+        display_name = "MultiWorldGG"
       }
     } : "${replace(key, ".", "-")}-by-vincent" => value
   }
