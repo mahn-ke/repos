@@ -47,6 +47,9 @@ locals {
       "handout.hackertours" = {
         skip_uptime_check = true
       }
+      "highscores.hackertours" = {
+        uptime_path = "/healthz"
+      }
       "backoffice.hackertours" = {}
       "cccbib"                 = {}
       "mancala-client"         = {}
@@ -151,6 +154,7 @@ locals {
     "eurovision-by-vincent"             = 3017
     "gdqreminder-by-vincent"            = 3018
     "backoffice-hackertours-by-vincent" = 3019
+    "highscores-hackertours-by-vincent" = 3020
   }
   renovate_package_rules = {
     "cloud-by-vincent" = [{
@@ -261,4 +265,21 @@ resource "uptimekuma_monitor_http" "http_monitor" {
   timeout                    = 24
   notification_ids           = [1]
   expiry_notification        = true
+}
+
+module "highscores_console_oauth" {
+  source = "./modules/console_oauth"
+  providers = {
+    github   = github
+    keycloak = keycloak
+  }
+
+  keycloak_realm_id = data.keycloak_realm.sso_by_vincent_mahn_ke.id
+  repository_name   = module.general["highscores-hackertours-by-vincent"].repository_name
+}
+
+output "highscores_console_credentials" {
+  description = "Copy the matching console credentials into its private config.ini; never publish this output."
+  value       = module.highscores_console_oauth.credentials
+  sensitive   = true
 }
