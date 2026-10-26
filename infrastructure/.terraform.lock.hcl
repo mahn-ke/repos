@@ -5,7 +5,7 @@ provider "registry.terraform.io/breml/uptimekuma" {
   version     = "0.4.0"
   constraints = "~> 0.3"
   hashes = [
-    "h1:OJZQHP7AqWEKQHsiPEmNte9/cPqL/rM5+hKEE5asfH8=",
+    "h1:+k4urYFapKAxV177c1RYz2nRMvy6wfG88Ysjvl38xwY=",
     "zh:08f9943fe614d6c7f84e7398c928a81e5be4bb6e858a3f2cc4d9342ffdc18429",
     "zh:0e0322f345b7038da09b5059c1a75e88f2f2ce8ac8f6af04dd7cb412c49b6994",
     "zh:1415f7c3ebba936daeb79f655bde881dc2207fd1480d51939794992b6e3e1999",
@@ -72,6 +72,7 @@ provider "registry.terraform.io/keycloak/keycloak" {
   version     = "5.10.0"
   constraints = ">= 5.9.0, 5.10.0, < 6.0.0"
   hashes = [
+    "h1:uvFYbKh1KbxxRpblW9MIkqAXJo6Ox+sLmma/VYeEVIM=",
     "h1:xD0HKSB567pqMZzXoBctOVghJy0wrsUDojc2ZDfkZdU=",
     "zh:13b97c37744b929ed906c588bddb5f9a33a3c8b6cd8914cf0dbaa00656a29963",
     "zh:14caf3effbebb5a447584a76c0ed0bc13fd369ed6fa42c7138cda6f937bf03ff",
