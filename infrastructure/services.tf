@@ -154,7 +154,7 @@ locals {
     "eurovision-by-vincent"             = 3017
     "gdqreminder-by-vincent"            = 3018
     "backoffice-hackertours-by-vincent" = 3019
-    "highscores-hackertours-by-vincent" = 3020
+    "highscores-hackertours-by-vincent" = 3021
   }
   renovate_package_rules = {
     "cloud-by-vincent" = [{
