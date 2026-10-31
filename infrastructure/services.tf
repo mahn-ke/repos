@@ -158,14 +158,14 @@ locals {
   }
   renovate_package_rules = {
     "cloud-by-vincent" = [{
-      matchDatasources  = ["docker"]
+      matchDatasources = ["docker"]
       matchPackageNames = [
         "ghcr.io/vimaster/nextcloud-sharelinkviewtracker",
         "ghcr.io/vimaster/nextcloud-paperlessforwarder"
       ]
-      versioning        = "semver"
-      pinDigests        = true
-      automerge         = false
+      versioning = "semver"
+      pinDigests = true
+      automerge  = false
     }]
     "slides-by-vincent" = [{
       description       = "Keep Babel compatible with @rollup/plugin-babel's Babel 7 peer requirement"
