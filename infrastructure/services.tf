@@ -159,7 +159,10 @@ locals {
   renovate_package_rules = {
     "cloud-by-vincent" = [{
       matchDatasources  = ["docker"]
-      matchPackageNames = ["ghcr.io/vimaster/nextcloud-sharelinkviewtracker"]
+      matchPackageNames = [
+        "ghcr.io/vimaster/nextcloud-sharelinkviewtracker",
+        "ghcr.io/vimaster/nextcloud-paperlessforwarder"
+      ]
       versioning        = "semver"
       pinDigests        = true
       automerge         = false
