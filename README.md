@@ -7,14 +7,16 @@ Sets up all repositories for this GitHub organization.
 `infrastructure/services.tf` registers `highscores.hackertours.by.vincent.mahn.ke`
 (HTTP health check `/healthz`, Node.js host port `3020`). Applying Terraform creates
 `mahn-ke/highscores-hackertours-by-vincent`, its standard generated scaffolding,
-and two independent confidential Keycloak service-account clients:
-`highscores-hackertours-3ds` and `highscores-hackertours-xbox`. Interactive and
+and three independent confidential Keycloak service-account clients:
+`highscores-hackertours-3ds`, `highscores-hackertours-xbox` and
+`highscores-hackertours-switch`. Interactive and
 password grants are disabled; access tokens last one hour. Existing interactive
 OAuth clients are unchanged.
 
 The new repository receives Actions secrets `OAUTH_URL`,
 `OAUTH_CONSOLE_3DS_CLIENT_ID`, `OAUTH_CONSOLE_3DS_CLIENT_SECRET`,
-`OAUTH_CONSOLE_XBOX_CLIENT_ID`, and `OAUTH_CONSOLE_XBOX_CLIENT_SECRET`.
+`OAUTH_CONSOLE_XBOX_CLIENT_ID`, `OAUTH_CONSOLE_XBOX_CLIENT_SECRET`,
+`OAUTH_CONSOLE_SWITCH_CLIENT_ID`, and `OAUTH_CONSOLE_SWITCH_CLIENT_SECRET`.
 Only the issuer and client IDs are passed into the backend container; the console
 secrets belong in private console `config.ini` files, never Git. After applying,
 retrieve them locally with:

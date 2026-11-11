@@ -21,8 +21,9 @@ variable "repository_name" {
 
 locals {
   consoles = {
-    "3ds"  = "3DS"
-    "xbox" = "XBOX"
+    "3ds"    = "3DS"
+    "xbox"   = "XBOX"
+    "switch" = "SWITCH"
   }
   issuer = "https://sso.by.vincent.mahn.ke/realms/sso.by.vincent.mahn.ke"
   secrets = merge({
