@@ -170,6 +170,14 @@ locals {
       pinDigests = true
       automerge  = false
     }]
+    "sso-by-vincent" = [{
+      description       = "Keycloak upgrades can break Admin API access for every Terraform plan; review them"
+      matchDatasources  = ["docker"]
+      matchPackageNames = ["quay.io/keycloak/keycloak"]
+      pinDigests        = true
+      automerge         = false
+      labels            = []
+    }]
     "slides-by-vincent" = [{
       description       = "Keep Babel compatible with @rollup/plugin-babel's Babel 7 peer requirement"
       matchManagers     = ["npm"]
