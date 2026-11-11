@@ -27,7 +27,7 @@ locals {
       "notifications" = {}
       "logging"       = {}
       "gamereleases" = {
-        uptime_path = "/releases.ics"
+        uptime_path = "/healthz"
       }
       "paperless" = {}
       "photos"    = {}
@@ -133,6 +133,9 @@ locals {
       }
       "multiworld" = {
         display_name = "MultiWorldGG"
+      }
+      "gamereleases" = {
+        display_name = "Game Releases"
       }
     } : "${replace(key, ".", "-")}-by-vincent" => value
   }
