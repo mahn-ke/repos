@@ -19,3 +19,24 @@ jobs:
         with:
           node-version: 24
       - run: node --test tools/generated-config*.test.mjs
+  # Generated Terraform reaches other repositories with [skip ci], so validate the
+  # templates once here: init resolves every provider constraint, validate checks the config
+  validate-templates:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        template: [infrastructure, service]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: hashicorp/setup-terraform@v4
+        with:
+          terraform_wrapper: false
+      - name: Render template
+        run: |
+          mkdir -p "$RUNNER_TEMP/rendered"
+          # shellcheck disable=SC2016 # $REPOSITORY is a literal template placeholder
+          sed 's/\$REPOSITORY/template-validation/g' "infrastructure/modules/general/${{ matrix.template }}/main.tf" > "$RUNNER_TEMP/rendered/main.tf"
+      - run: terraform init -backend=false -input=false
+        working-directory: ${{ runner.temp }}/rendered
+      - run: terraform validate
+        working-directory: ${{ runner.temp }}/rendered
