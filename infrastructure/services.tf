@@ -53,6 +53,9 @@ locals {
       "multiplayer.hackertours" = {
         uptime_path = "/healthz"
       }
+      "ratings.hackertours" = {
+        uptime_path = "/healthz"
+      }
       "backoffice.hackertours" = {}
       "cccbib"                 = {}
       "mancala-client"         = {}
@@ -162,6 +165,7 @@ locals {
     "backoffice-hackertours-by-vincent"  = 3019
     "highscores-hackertours-by-vincent"  = 3021
     "multiplayer-hackertours-by-vincent" = 3022
+    "ratings-hackertours-by-vincent"     = 3023
   }
   renovate_package_rules = {
     "cloud-by-vincent" = [{
@@ -294,8 +298,11 @@ module "highscores_console_oauth" {
 
   keycloak_realm_id = data.keycloak_realm.sso_by_vincent_mahn_ke.id
   repository_name   = module.general["highscores-hackertours-by-vincent"].repository_name
-  # The race's announce server accepts the same console service accounts: it gets their client ids (no secrets).
-  client_id_repository_names = [module.general["multiplayer-hackertours-by-vincent"].repository_name]
+  # The race's announce server and the tour ratings accept the same console service accounts: they get their client ids (no secrets).
+  client_id_repository_names = [
+    module.general["multiplayer-hackertours-by-vincent"].repository_name,
+    module.general["ratings-hackertours-by-vincent"].repository_name,
+  ]
 }
 
 output "highscores_console_credentials" {
