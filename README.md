@@ -2,6 +2,15 @@
 
 Sets up all repositories for this GitHub organization.
 
+## Hackertours tour ratings
+
+`infrastructure/services.tf` registers `ratings.hackertours.by.vincent.mahn.ke`
+(HTTP health check `/healthz`, Node.js host port `3023`): the consoles send the
+guests' tour ratings (and drawings) there, for the team; it has no public read API.
+It accepts the console service accounts of the high scores (below):
+`mahn-ke/ratings-hackertours-by-vincent` receives the Actions secrets `OAUTH_URL`
+and `OAUTH_CONSOLE_{3DS,XBOX,SWITCH,GBA}_CLIENT_ID`, never the client secrets.
+
 ## Hackertours race announce server
 
 `infrastructure/services.tf` registers `multiplayer.hackertours.by.vincent.mahn.ke`
