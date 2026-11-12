@@ -2,14 +2,25 @@
 
 Sets up all repositories for this GitHub organization.
 
+## Hackertours race announce server
+
+`infrastructure/services.tf` registers `multiplayer.hackertours.by.vincent.mahn.ke`
+(HTTP health check `/healthz`, Node.js host port `3022`): the directory of the
+Hackertours race, where the consoles of an event announce the addresses their race
+socket can be reached at. It accepts the console service accounts of the high
+scores (below): `mahn-ke/multiplayer-hackertours-by-vincent` receives the Actions
+secrets `OAUTH_URL` and `OAUTH_CONSOLE_{3DS,XBOX,SWITCH,GBA}_CLIENT_ID`, never the
+client secrets.
+
 ## Hackertours high scores
 
 `infrastructure/services.tf` registers `highscores.hackertours.by.vincent.mahn.ke`
 (HTTP health check `/healthz`, Node.js host port `3020`). Applying Terraform creates
 `mahn-ke/highscores-hackertours-by-vincent`, its standard generated scaffolding,
-and three independent confidential Keycloak service-account clients:
-`highscores-hackertours-3ds`, `highscores-hackertours-xbox` and
-`highscores-hackertours-switch`. Interactive and
+and four independent confidential Keycloak service-account clients:
+`highscores-hackertours-3ds`, `highscores-hackertours-xbox`,
+`highscores-hackertours-switch` and `highscores-hackertours-gba` (the GBA's link
+server, which races for the GBA). Interactive and
 password grants are disabled; access tokens last one hour. Existing interactive
 OAuth clients are unchanged.
 

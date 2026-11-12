@@ -19,11 +19,18 @@ variable "repository_name" {
   type = string
 }
 
+variable "client_id_repository_names" {
+  description = "Further repositories that get OAUTH_URL and the consoles' client ids (not their secrets)."
+  type        = list(string)
+  default     = []
+}
+
 locals {
   consoles = {
     "3ds"    = "3DS"
     "xbox"   = "XBOX"
     "switch" = "SWITCH"
+    "gba"    = "GBA"
   }
   issuer = "https://sso.by.vincent.mahn.ke/realms/sso.by.vincent.mahn.ke"
   secrets = merge({
@@ -60,6 +67,19 @@ resource "github_actions_secret" "console" {
   repository       = var.repository_name
   secret_name      = each.key
   plaintext_value  = local.secrets[each.key]
+  destroy_on_drift = true
+}
+
+resource "github_actions_secret" "client_id" {
+  for_each = {
+    for pair in setproduct(var.client_id_repository_names, concat(["OAUTH_URL"], [
+      for suffix in values(local.consoles) : "OAUTH_CONSOLE_${suffix}_CLIENT_ID"
+    ])) : "${pair[0]}/${pair[1]}" => { repository = pair[0], name = pair[1] }
+  }
+
+  repository       = each.value.repository
+  secret_name      = each.value.name
+  plaintext_value  = local.secrets[each.value.name]
   destroy_on_drift = true
 }
 

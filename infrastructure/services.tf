@@ -50,6 +50,9 @@ locals {
       "highscores.hackertours" = {
         uptime_path = "/healthz"
       }
+      "multiplayer.hackertours" = {
+        uptime_path = "/healthz"
+      }
       "backoffice.hackertours" = {}
       "cccbib"                 = {}
       "mancala-client"         = {}
@@ -140,24 +143,25 @@ locals {
     } : "${replace(key, ".", "-")}-by-vincent" => value
   }
   nodejs = {
-    "gamereleases-by-vincent"           = 3000
-    "handout-hackertours-by-vincent"    = 3002
-    "fah-break"                         = 3003
-    "backup-trigger"                    = 3004
-    "fitx-fetcher"                      = 3005
-    "myfitnesspal-fetcher"              = 3006
-    "slides-by-vincent"                 = 3009
-    "wallpapers-by-vincent"             = 3010
-    "kiosk-39c3-by-vincent"             = 3011
-    "mancala-client-by-vincent"         = 3012
-    "crop-by-vincent"                   = 3013
-    "teamsbg-by-vincent"                = 3014
-    "forecast-by-vincent"               = 3015
-    "rcon-by-vincent"                   = 3016
-    "eurovision-by-vincent"             = 3017
-    "gdqreminder-by-vincent"            = 3018
-    "backoffice-hackertours-by-vincent" = 3019
-    "highscores-hackertours-by-vincent" = 3021
+    "gamereleases-by-vincent"            = 3000
+    "handout-hackertours-by-vincent"     = 3002
+    "fah-break"                          = 3003
+    "backup-trigger"                     = 3004
+    "fitx-fetcher"                       = 3005
+    "myfitnesspal-fetcher"               = 3006
+    "slides-by-vincent"                  = 3009
+    "wallpapers-by-vincent"              = 3010
+    "kiosk-39c3-by-vincent"              = 3011
+    "mancala-client-by-vincent"          = 3012
+    "crop-by-vincent"                    = 3013
+    "teamsbg-by-vincent"                 = 3014
+    "forecast-by-vincent"                = 3015
+    "rcon-by-vincent"                    = 3016
+    "eurovision-by-vincent"              = 3017
+    "gdqreminder-by-vincent"             = 3018
+    "backoffice-hackertours-by-vincent"  = 3019
+    "highscores-hackertours-by-vincent"  = 3021
+    "multiplayer-hackertours-by-vincent" = 3022
   }
   renovate_package_rules = {
     "cloud-by-vincent" = [{
@@ -290,6 +294,8 @@ module "highscores_console_oauth" {
 
   keycloak_realm_id = data.keycloak_realm.sso_by_vincent_mahn_ke.id
   repository_name   = module.general["highscores-hackertours-by-vincent"].repository_name
+  # The race's announce server accepts the same console service accounts: it gets their client ids (no secrets).
+  client_id_repository_names = [module.general["multiplayer-hackertours-by-vincent"].repository_name]
 }
 
 output "highscores_console_credentials" {
