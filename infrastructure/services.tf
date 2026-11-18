@@ -67,6 +67,9 @@ locals {
       "prometheus"             = {}
       "gdqreminder"            = {}
       "multiworld"             = {}
+      "editor.photos" = {
+        uptime_path = "/healthz"
+      }
     } : replace("${key}.by.vincent", ".", "-") => value
   }
   oauth_clients = {
@@ -113,7 +116,8 @@ locals {
       "photos" = {
         display_name = "Immich"
         valid_redirect_urls = [
-          "app.immich:///oauth-callback"
+          "app.immich:///oauth-callback",
+          "https://editor.photos.by.vincent.mahn.ke/auth/callback"
         ]
       }
       "matrix" = {
@@ -166,6 +170,7 @@ locals {
     "highscores-hackertours-by-vincent"  = 3021
     "multiplayer-hackertours-by-vincent" = 3022
     "ratings-hackertours-by-vincent"     = 3023
+    "editor-photos-by-vincent"           = 3024
   }
   renovate_package_rules = {
     "cloud-by-vincent" = [{
