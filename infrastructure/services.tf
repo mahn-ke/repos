@@ -117,7 +117,9 @@ locals {
         display_name = "Immich"
         valid_redirect_urls = [
           "app.immich:///oauth-callback",
-          "https://editor.photos.by.vincent.mahn.ke/auth/callback"
+          "https://editor.photos.by.vincent.mahn.ke/auth/callback",
+          # Local development of editor-photos-by-vincent (PORT=3024 APP_BASE_URL=http://localhost:3024)
+          "http://localhost:3024/auth/callback"
         ]
       }
       "matrix" = {
