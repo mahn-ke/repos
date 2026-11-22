@@ -2,6 +2,26 @@
 
 Sets up all repositories for this GitHub organization.
 
+## wger OAuth client for reports
+
+`infrastructure/services.tf` (module `wger_oauth_reports`, `infrastructure/modules/wger_oauth`) lets
+reports.by.vincent.mahn.ke read workouts from wger through wger's own OAuth2/OIDC provider. There is no
+wger Terraform provider, so Terraform only generates and distributes the credentials (`hashicorp/tls`,
+`hashicorp/random`):
+
+- `mahn-ke/fitness-by-vincent` gets `IDP_OIDC_PRIVATE_KEY`, the provider's RSA signing key, and
+  `WGER_OIDC_CLIENTS`, a JSON client list. Its `oidc_setup` service registers the clients on deploy.
+- `mahn-ke/reports-by-vincent` gets `WGER_OAUTH_CLIENT_ID` and `WGER_OAUTH_CLIENT_SECRET`.
+
+Apply Terraform first, then deploy fitness-by-vincent, then reports-by-vincent. For local development:
+
+```sh
+terraform -chdir=infrastructure output -json wger_oauth_reports_credentials
+```
+
+Replacing `tls_private_key.idp_signing` invalidates every token wger has issued, so clients have to
+connect again.
+
 ## Hackertours tour ratings
 
 `infrastructure/services.tf` registers `ratings.hackertours.by.vincent.mahn.ke`
