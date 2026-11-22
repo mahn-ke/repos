@@ -153,7 +153,6 @@ locals {
   }
   nodejs = {
     "gamereleases-by-vincent"            = 3000
-    "handout-hackertours-by-vincent"     = 3002
     "fah-break"                          = 3003
     "backup-trigger"                     = 3004
     "fitx-fetcher"                       = 3005
@@ -168,7 +167,6 @@ locals {
     "rcon-by-vincent"                    = 3016
     "eurovision-by-vincent"              = 3017
     "gdqreminder-by-vincent"             = 3018
-    "backoffice-hackertours-by-vincent"  = 3019
     "highscores-hackertours-by-vincent"  = 3021
     "multiplayer-hackertours-by-vincent" = 3022
     "ratings-hackertours-by-vincent"     = 3023
