@@ -317,3 +317,28 @@ output "highscores_console_credentials" {
   value       = module.highscores_console_oauth.credentials
   sensitive   = true
 }
+
+# reports.by.vincent.mahn.ke reads workouts from wger (fitness.by.vincent.mahn.ke) via wger's own
+# OIDC provider ("Connect wger"); fitness-by-vincent registers the client on deploy.
+module "wger_oauth_reports" {
+  source = "./modules/wger_oauth"
+  providers = {
+    github = github
+  }
+
+  wger_repository_name   = module.general["fitness-by-vincent"].repository_name
+  client_repository_name = module.general["reports-by-vincent"].repository_name
+  client_id              = "reports-by-vincent"
+  client_name            = "Data Dashboard (reports)"
+  redirect_uris = [
+    "https://reports.by.vincent.mahn.ke/wger/callback",
+    # Local development of reports-by-vincent (docker-compose.local.yml)
+    "http://localhost:8082/wger/callback",
+  ]
+}
+
+output "wger_oauth_reports_credentials" {
+  description = "WGER_OAUTH_CLIENT_ID/SECRET for local reports development; never publish this output."
+  value       = module.wger_oauth_reports.client_credentials
+  sensitive   = true
+}
