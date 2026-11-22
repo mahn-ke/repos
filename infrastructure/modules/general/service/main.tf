@@ -20,7 +20,7 @@ terraform {
     }
     uptimekuma = {
       source  = "breml/uptimekuma"
-      version = "~> 0.5"
+      version = "~> 0.6"
     }
   }
 }
