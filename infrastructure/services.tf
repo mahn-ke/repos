@@ -44,9 +44,6 @@ locals {
         skip_uptime_check = true
       }
       "kiosk.39c3" = {}
-      "handout.hackertours" = {
-        skip_uptime_check = true
-      }
       "highscores.hackertours" = {
         uptime_path = "/healthz"
       }
@@ -56,17 +53,16 @@ locals {
       "ratings.hackertours" = {
         uptime_path = "/healthz"
       }
-      "backoffice.hackertours" = {}
-      "cccbib"                 = {}
-      "mancala-client"         = {}
-      "crop"                   = {}
-      "forecast"               = {}
-      "secrets"                = {}
-      "rcon"                   = {}
-      "eurovision"             = {}
-      "prometheus"             = {}
-      "gdqreminder"            = {}
-      "multiworld"             = {}
+      "cccbib"         = {}
+      "mancala-client" = {}
+      "crop"           = {}
+      "forecast"       = {}
+      "secrets"        = {}
+      "rcon"           = {}
+      "eurovision"     = {}
+      "prometheus"     = {}
+      "gdqreminder"    = {}
+      "multiworld"     = {}
       "editor.photos" = {
         uptime_path = "/healthz"
       }
@@ -153,7 +149,6 @@ locals {
   }
   nodejs = {
     "gamereleases-by-vincent"            = 3000
-    "handout-hackertours-by-vincent"     = 3002
     "fah-break"                          = 3003
     "backup-trigger"                     = 3004
     "fitx-fetcher"                       = 3005
@@ -168,7 +163,6 @@ locals {
     "rcon-by-vincent"                    = 3016
     "eurovision-by-vincent"              = 3017
     "gdqreminder-by-vincent"             = 3018
-    "backoffice-hackertours-by-vincent"  = 3019
     "highscores-hackertours-by-vincent"  = 3021
     "multiplayer-hackertours-by-vincent" = 3022
     "ratings-hackertours-by-vincent"     = 3023
