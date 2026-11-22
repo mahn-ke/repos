@@ -44,9 +44,6 @@ locals {
         skip_uptime_check = true
       }
       "kiosk.39c3" = {}
-      "handout.hackertours" = {
-        skip_uptime_check = true
-      }
       "highscores.hackertours" = {
         uptime_path = "/healthz"
       }
@@ -56,17 +53,16 @@ locals {
       "ratings.hackertours" = {
         uptime_path = "/healthz"
       }
-      "backoffice.hackertours" = {}
-      "cccbib"                 = {}
-      "mancala-client"         = {}
-      "crop"                   = {}
-      "forecast"               = {}
-      "secrets"                = {}
-      "rcon"                   = {}
-      "eurovision"             = {}
-      "prometheus"             = {}
-      "gdqreminder"            = {}
-      "multiworld"             = {}
+      "cccbib"         = {}
+      "mancala-client" = {}
+      "crop"           = {}
+      "forecast"       = {}
+      "secrets"        = {}
+      "rcon"           = {}
+      "eurovision"     = {}
+      "prometheus"     = {}
+      "gdqreminder"    = {}
+      "multiworld"     = {}
       "editor.photos" = {
         uptime_path = "/healthz"
       }
