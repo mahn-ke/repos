@@ -5,19 +5,7 @@ provider "registry.terraform.io/breml/uptimekuma" {
   version     = "0.6.0"
   constraints = "~> 0.5"
   hashes = [
-    "h1:+p3Ij+z6d+i5AqviOogK/V6sRGt9mLENFVWZQ5Ng5zo=",
-    "h1:0m8Tl/rwfnMFNEJsyZbMyc9fSrI28ohKt8r+SkhDM6Q=",
-    "h1:1Fm5ccA/JyEDATplldPX4qO3IGb60f17L2AF2cIIg9w=",
-    "h1:1b+JI2jJ9LsCzMH4m6e6cMpIDRVnsKXdyrjLpNsRE80=",
-    "h1:BPXCVZa86irAIdgujwmJO4Svw2mfymZV8i4PibpzpSk=",
-    "h1:F1tNRabO8CJm1MkvcQIpbpWF5Z7aidHQ+ZsOTtSKfDE=",
-    "h1:H2nJyvbUGYSFy/KGTQWJH0akDq/0/lnkdaggLNDtI9w=",
-    "h1:LuPHHm6bt8UyitlrPDHbp77PooDc0mBmZpfLQcRzvec=",
-    "h1:NCJJtKg8vQdcZwAzRpmoPThaFk5ZpjzThWV+A1mXebE=",
-    "h1:QDbh+jcag04isKJws1jx14Z/J8ElODC85cvdZ5VZMAw=",
     "h1:b75MeSTZSzscPXMJ4u4js+wX15trhPBlUj5MF13GFx8=",
-    "h1:dSqRGkKr+aufovIPs12rXwH33veeyRyYy9HOuFRVs1w=",
-    "h1:jM7BmpdP3EOF6xfR40z45P6GCSMDQ/9ARA5BdKfNAJU=",
     "zh:034d437b921f3f1294cba42af90e3e39e7808b37ee52b57d6d697f0264259dd2",
     "zh:1beba7a4e383edd314441217293b82ed4342828534344a67c6a42ecdaa76925c",
     "zh:2debadb7ed241d739df9b08e8811afca9e11dc691bf698cd5eac4093dd45189e",
